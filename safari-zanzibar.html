@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251e">
+    <meta name="description" content="Explore a sample 10-day Tanzania safari and Zanzibar beach escape with Tarangire, Serengeti, Ngorongoro Crater, Stone Town and the Indian Ocean.">
+    <title>Safari + Zanzibar | Cinematic Wonder Africa Safaris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2921;
+        --forest: #17251e;
+        --moss: #57664c;
+        --sand: #eee9dc;
+        --paper: #f8f6f0;
+        --clay: #bd7958;
+        --line: rgba(29, 41, 33, .18);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+      .serif { font-family: var(--serif); font-weight: 400; }
+      .eyebrow { margin: 0; font-size: .68rem; font-weight: 600; letter-spacing: .2em; line-height: 1.5; text-transform: uppercase; }
+      .topbar { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .nav { display: flex; min-height: 94px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .02em; line-height: 1.04; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; font-family: var(--sans); font-size: .7rem; }
+      .brand small { display: block; margin-top: 5px; font-family: var(--sans); font-size: .48rem; letter-spacing: .23em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 18px; }
+      .nav-links a { font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; }
+      .nav-links a:hover { color: #e6c1a8; }
+      .nav-cta { padding: 14px 19px; border: 1px solid rgba(255,255,255,.65); }
+      .menu-toggle { display: none; padding: 10px 0 10px 10px; color: #fff; border: 0; background: transparent; font: inherit; font-size: .75rem; letter-spacing: .13em; text-transform: uppercase; }
+      .hero {
+        min-height: min(760px, 94svh);
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(13,25,19,.78), rgba(13,25,19,.2)),
+          url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/489f88ca0_generated_image.png") center 48% / cover;
+      }
+      .hero-content { max-width: 860px; padding: 150px 0 80px; }
+      .hero .eyebrow { color: #e3c2a9; }
+      h1 { margin: 22px 0; font-size: clamp(3.8rem, 8vw, 7.3rem); letter-spacing: -.055em; line-height: .92; }
+      h1 em { color: #e3c2a9; font-style: italic; }
+      .hero-copy { max-width: 660px; margin: 0; color: rgba(255,255,255,.84); font-size: .98rem; line-height: 1.8; }
+      .hero-tagline { margin: 18px 0 0; color: #f3ddcb; font-family: var(--serif); font-size: 1.2rem; font-style: italic; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; border: 1px solid transparent; font-size: .67rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .button-light { color: var(--forest); background: #f6f1e7; }
+      .button-outline { color: #fff; border-color: rgba(255,255,255,.72); background: transparent; }
+      .button-dark { color: #fff; background: var(--forest); }
+      .button:hover { filter: brightness(1.08); }
+      .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; padding-block: 92px 96px; }
+      .section-label { color: var(--clay); }
+      h2 { margin: 16px 0 0; font-size: clamp(2.6rem, 5vw, 4.5rem); letter-spacing: -.045em; line-height: .99; }
+      h2 em { color: var(--moss); font-style: italic; }
+      .prose { max-width: 720px; color: #667066; font-size: .9rem; line-height: 1.85; }
+      .prose p { margin: 0 0 16px; }
+      .notice { margin-top: 18px; padding: 16px 18px; border-left: 3px solid var(--clay); background: var(--sand); color: #555f54; font-size: .78rem; line-height: 1.7; }
+      .itinerary { padding-block: 88px 100px; background: var(--sand); }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 30px; }
+      .section-head > p { max-width: 420px; margin: 0 0 4px; color: #6b7169; font-size: .84rem; line-height: 1.7; }
+      .day-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .day-card { position: relative; min-width: 0; padding: 25px 27px 24px; background: var(--paper); }
+      .day-card:last-child { grid-column: 1 / -1; }
+      .day-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .day-number { color: var(--clay); font-size: .63rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+      .overnight { color: #737a70; font-size: .61rem; letter-spacing: .08em; text-align: right; text-transform: uppercase; }
+      .day-card h3 { margin: 13px 0 9px; font-family: var(--serif); font-size: 1.55rem; font-weight: 400; line-height: 1.15; }
+      .day-card p { margin: 0; color: #697267; font-size: .79rem; line-height: 1.75; }
+      .highlights { margin-top: 17px; padding-top: 14px; border-top: 1px solid var(--line); }
+      .highlights strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: .61rem; letter-spacing: .11em; text-transform: uppercase; }
+      .highlights p { color: #6d756c; font-size: .72rem; }
+      .extras { padding-block: 90px 100px; }
+      .extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 31px; }
+      .extras-card { padding: 28px; background: var(--sand); }
+      .extras-card h3 { margin: 0; font-family: var(--serif); font-size: 1.6rem; font-weight: 400; }
+      .extras-card ul { display: grid; gap: 10px; margin: 17px 0 0; padding-left: 19px; color: #626d62; font-size: .78rem; line-height: 1.6; }
+      .extras-note { margin: 18px 0 0; color: #72796f; font-size: .74rem; line-height: 1.7; }
+      .customize { padding-block: 85px 95px; color: #f5f0e6; background: var(--forest); }
+      .customize-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; }
+      .customize .section-label { color: #d3a384; }
+      .customize h2 em { color: #d3a384; }
+      .customize .prose { color: rgba(245,240,230,.76); }
+      .trip-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 24px; }
+      .trip-fact { padding: 15px 16px; border: 1px solid rgba(255,255,255,.2); }
+      .trip-fact span { display: block; }
+      .trip-fact .label { margin-bottom: 6px; color: #d3a384; font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; }
+      .trip-fact .value { color: rgba(255,255,255,.9); font-size: .76rem; line-height: 1.5; }
+      .cta { padding-block: 78px; background: var(--sand); text-align: center; }
+      .cta h2 { max-width: 850px; margin-inline: auto; }
+      .cta p { max-width: 670px; margin: 18px auto 23px; color: #687166; font-size: .86rem; line-height: 1.8; }
+      .footer { padding-block: 28px; color: rgba(245,240,230,.72); background: #111b15; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .footer .brand { color: #fff; font-size: .95rem; }
+      .footer .brand-mark { width: 31px; height: 31px; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 16px; font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
+      .footer-links a:hover { color: #fff; }
+      .footer-note { font-size: .68rem; }
+      @media (max-width: 1100px) and (min-width: 651px) {
+        .nav { min-height: 82px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 82px; right: 32px; left: 32px; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+      }
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 40px, 520px); }
+        .nav { min-height: 76px; }
+        .brand { font-size: .96rem; }
+        .brand-mark { width: 32px; height: 32px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 76px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+        .hero { min-height: 680px; min-height: 90svh; background-position: 58% center; }
+        .hero-content { padding: 120px 0 70px; }
+        h1 { font-size: clamp(3.3rem, 13vw, 5rem); }
+        .hero-copy { font-size: .9rem; }
+        .intro, .customize-grid { grid-template-columns: 1fr; gap: 22px; padding-block: 70px 76px; }
+        .itinerary { padding-block: 70px 76px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+        .day-grid { grid-template-columns: 1fr; }
+        .day-card:last-child { grid-column: auto; }
+        .day-card { padding: 22px; }
+        .extras { padding-block: 70px 76px; }
+        .extras-grid { grid-template-columns: 1fr; gap: 13px; }
+        .customize { padding-block: 70px 76px; }
+        .trip-facts { grid-template-columns: 1fr 1fr; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
+          <a href="index.html">Home</a><a href="about.html">About us</a><a href="index.html#packages">Safari packages</a><a href="tanzania-circuits.html">Tanzania circuits</a><a href="cultural-tours.html">Cultural tours</a><a href="kilimanjaro.html">Kilimanjaro</a><a class="nav-cta" href="index.html?experience=Safari%20%2B%20Zanzibar&destination=10-Day%20Tanzania%20Safari%20%2B%20Zanzibar#contact">Plan your safari</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-content">
+          <p class="eyebrow">From the African wilderness to the ocean</p>
+          <h1 class="serif">One journey.<br><em>Two worlds.</em></h1>
+          <p class="hero-copy">A 10-day Tanzania safari and Zanzibar beach escape, from Tarangire's baobab landscapes and the Serengeti plains to Ngorongoro Crater, Stone Town and the turquoise Indian Ocean.</p>
+          <p class="hero-tagline">Endless memories.</p>
+          <div class="hero-actions"><a class="button button-light" href="#itinerary">Explore the itinerary <span aria-hidden="true">-&gt;</span></a><a class="button button-outline" href="index.html?experience=Safari%20%2B%20Zanzibar&destination=10-Day%20Tanzania%20Safari%20%2B%20Zanzibar#contact">Request a personalized quote</a></div>
+        </div>
+      </section>
+
+      <section class="intro wrap">
+        <div><p class="eyebrow section-label">10 days / 9 nights</p><h2 class="serif">Wildlife, culture<br>& island <em>time.</em></h2></div>
+        <div class="prose">
+          <p>Begin across Tanzania's savannahs, where elephants, lions, giraffes, zebras and many other species roam. Explore Tarangire, the Serengeti and Ngorongoro Crater, with a cultural experience subject to timing and arrangements.</p>
+          <p>Then fly to Zanzibar for white-sand beaches, a guided spice farm visit, historic Stone Town and time to unwind beside the Indian Ocean. This sample can be tailored to your dates, travel style and preferred accommodation.</p>
+          <div class="notice"><strong>Sample itinerary.</strong> Wildlife sightings, park access, domestic flight schedules, cultural visits, accommodation and activities depend on season, availability, local operating conditions and the final confirmed quotation.</div>
+        </div>
+      </section>
+
+      <section class="itinerary" id="itinerary">
+        <div class="wrap">
+          <div class="section-head"><div><p class="eyebrow section-label">Your day-by-day itinerary</p><h2 class="serif">Ten days of Tanzania.</h2></div><p>Nine nights across Arusha, the northern safari circuit and Zanzibar. This proposed route may be adjusted to confirmed flights and arrangements.</p></div>
+          <div class="day-grid" id="day-grid"></div>
+        </div>
+      </section>
+
+      <section class="extras">
+        <div class="wrap">
+          <p class="eyebrow section-label">What makes this journey special?</p>
+          <h2 class="serif">From wildlife encounters<br>to <em>island heritage.</em></h2>
+          <div class="extras-grid">
+            <article class="extras-card"><h3>Suggested inclusions</h3><ul><li>Airport arrival and departure transfers, as specified.</li><li>Private safari vehicle with an experienced driver-guide.</li><li>Park and conservation-area entrance fees included in the confirmed quotation.</li><li>Safari accommodation, meals and scheduled game drives as listed.</li><li>Guided cultural experience, subject to arrangements.</li><li>Domestic flight from Arusha to Zanzibar, if confirmed as included.</li><li>Zanzibar airport transfers and beach accommodation as quoted.</li><li>Guided spice farm and Stone Town visits, if confirmed as included.</li></ul></article>
+            <article class="extras-card"><h3>Typically excluded unless agreed</h3><ul><li>International flights and visa fees.</li><li>Travel insurance.</li><li>Personal expenses and tips or gratuities.</li><li>Optional Zanzibar activities such as snorkeling, scuba diving or dhow cruises.</li><li>Applicable Zanzibar visitor insurance and local tourism taxes.</li><li>Any service not expressly listed in the confirmed quotation.</li></ul><p class="extras-note">Final inclusions, exclusions, activity schedules and costs depend on your personalized quotation and booking terms.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="customize">
+        <div class="wrap customize-grid">
+          <div><p class="eyebrow section-label">Make this journey your own</p><h2 class="serif">Your Africa.<br><em>Your way.</em></h2></div>
+          <div class="prose">
+            <p>Every traveler dreams of Africa differently. Whether you prefer luxury lodges, comfortable mid-range accommodation, a romantic honeymoon, a family adventure or a private photographic safari, share your preferences and we can help explore suitable options.</p>
+            <div class="trip-facts">
+              <div class="trip-fact"><span class="label">Duration</span><span class="value">10 days / 9 nights</span></div>
+              <div class="trip-fact"><span class="label">Destinations</span><span class="value">Arusha · Tarangire · Serengeti · Ngorongoro · Zanzibar</span></div>
+              <div class="trip-fact"><span class="label">Safari style</span><span class="value">Private safari + beach holiday</span></div>
+              <div class="trip-fact"><span class="label">Accommodation</span><span class="value">Budget-friendly, mid-range or luxury options</span></div>
+              <div class="trip-fact"><span class="label">Best for</span><span class="value">Couples, honeymooners, families, friends and wildlife lovers</span></div>
+              <div class="trip-fact"><span class="label">Availability</span><span class="value">Year-round, subject to seasonal conditions</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="wrap"><p class="eyebrow section-label">Ready to experience Tanzania?</p><h2 class="serif">From the roar of lions to the rhythm of ocean waves.</h2><p>Tell us your preferred dates, accommodation style, group size and interests. Cinematic Wonder Africa Safaris can help you explore an itinerary and arrangements for your Tanzania wilderness and Zanzibar escape.</p><a class="button button-dark" href="index.html?experience=Safari%20%2B%20Zanzibar&destination=10-Day%20Tanzania%20Safari%20%2B%20Zanzibar#contact">Plan my safari + Zanzibar <span aria-hidden="true">-&gt;</span></a></div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+      <span class="footer-note">Experience Africa. Discover the Wonder.</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About us</a><a href="tanzania-circuits.html">Tanzania circuits</a><a href="cultural-tours.html">Cultural tours</a><a href="index.html#contact">Contact</a></div>
+    </div></footer>
+
+    <script>
+      const days = [
+        ["Day 1", "Arrival in Tanzania — welcome to Arusha", "Upon arrival at Kilimanjaro International Airport, meet your representative and transfer to your accommodation in Arusha. Relax after your journey and enjoy your first evening beneath the African sky.", "Airport pickup and transfer · Safari briefing · Overnight in Arusha", "Arusha"],
+        ["Day 2", "Arusha — Tarangire National Park", "After breakfast, drive to Tarangire, known for ancient baobab trees and large elephant populations. Enjoy a game drive in search of elephants, giraffes, zebras, wildebeest, lions and other wildlife, then continue to Karatu.", "Tarangire National Park · Elephant encounters · Baobab landscapes · Game drive", "Karatu"],
+        ["Day 3", "Karatu — Serengeti National Park", "Travel toward Serengeti through the landscapes of the Ngorongoro Conservation Area. Enjoy a game drive as you enter the Serengeti, home to lions, cheetahs, leopards, elephants, giraffes and many other species.", "Ngorongoro highlands · Serengeti wildlife viewing · African sunset", "Serengeti"],
+        ["Day 4", "Full-day Serengeti safari", "Spend the day exploring the Serengeti on morning and afternoon game drives. Search for predators and grazing herds, with migration-related sightings depending on the season and animal movements. Enjoy a picnic lunch in the park.", "Full-day game drives · Wildlife viewing opportunities · Photography · Serengeti landscapes", "Serengeti"],
+        ["Day 5", "Serengeti — Ngorongoro Conservation Area — Karatu", "Enjoy a final morning game drive in the Serengeti before departing toward the Ngorongoro Conservation Area. Travel through dramatic highland scenery and continue to Karatu for the evening.", "Morning Serengeti game drive · Ngorongoro highlands · Countryside landscapes", "Karatu"],
+        ["Day 6", "Ngorongoro Crater — cultural experience — Arusha", "After an early breakfast, descend into Ngorongoro Crater for a game drive. Wildlife may include lions, buffaloes, zebras, hippos, elephants and, with luck, black rhinoceroses. Afterward, enjoy a guided cultural experience in the Karatu or Mto wa Mbu area, subject to timing and arrangements, then continue to Arusha.", "Ngorongoro Crater · Wildlife photography · Guided cultural experience, if arranged", "Arusha"],
+        ["Day 7", "Arusha — fly to Zanzibar", "After breakfast, transfer to the airport for your scheduled flight to Zanzibar. Meet your driver on arrival and transfer to your beach accommodation. Spend the afternoon relaxing beside the Indian Ocean.", "Domestic flight, subject to schedule · Tropical island scenery · Beach time", "Zanzibar beach resort"],
+        ["Day 8", "Zanzibar spice farm & historic Stone Town", "Discover Zanzibar's history, culture and flavors on a guided spice farm visit. Learn about cloves, cinnamon, vanilla, nutmeg and other spices, then explore historic Stone Town's winding streets, carved doors and Swahili heritage before returning to your beach accommodation.", "Guided spice farm tour · Stone Town · Swahili culture and architecture", "Zanzibar beach resort"],
+        ["Day 9", "Zanzibar beach relaxation", "Enjoy a free day on Zanzibar's coastline. Swim, relax or arrange an optional ocean activity such as snorkeling, scuba diving or a traditional dhow sunset cruise. Activities depend on availability and are not included unless specified.", "Beach time · Optional ocean activities · Tropical island evening", "Zanzibar beach resort"],
+        ["Day 10", "Zanzibar — departure", "Enjoy breakfast and free time depending on your flight schedule. Your driver will transfer you to Zanzibar International Airport for your onward journey.", "Airport transfer, subject to confirmed arrangements"]
+      ];
+
+      function createDayCard([number, title, description, highlights, stay]) {
+        const card = document.createElement("article");
+        card.className = "day-card";
+        const top = document.createElement("div");
+        top.className = "day-top";
+        const dayNumber = document.createElement("span");
+        dayNumber.className = "day-number";
+        dayNumber.textContent = number;
+        top.append(dayNumber);
+        if (stay) {
+          const overnight = document.createElement("span");
+          overnight.className = "overnight";
+          overnight.textContent = `Overnight: ${stay}`;
+          top.append(overnight);
+        }
+        const heading = document.createElement("h3");
+        heading.textContent = title;
+        const text = document.createElement("p");
+        text.textContent = description;
+        const highlightSection = document.createElement("div");
+        highlightSection.className = "highlights";
+        const highlightHeading = document.createElement("strong");
+        highlightHeading.textContent = "Highlights";
+        const highlightText = document.createElement("p");
+        highlightText.textContent = highlights;
+        highlightSection.append(highlightHeading, highlightText);
+        card.append(top, heading, text, highlightSection);
+        return card;
+      }
+
+      const dayGrid = document.querySelector("#day-grid");
+      days.forEach((day) => dayGrid.append(createDayCard(day)));
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("open", !isOpen);
+      });
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

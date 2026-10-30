@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251e">
+    <meta name="description" content="Explore sample Machame, Lemosho and Marangu climbing itineraries for Mount Kilimanjaro with Cinematic Wonder Africa Safaris.">
+    <title>Kilimanjaro Climbing | Cinematic Wonder Africa Safaris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2921;
+        --forest: #17251e;
+        --moss: #57664c;
+        --sand: #eee9dc;
+        --paper: #f8f6f0;
+        --clay: #bd7958;
+        --line: rgba(29, 41, 33, .18);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+      .serif { font-family: var(--serif); font-weight: 400; }
+      .eyebrow { margin: 0; font-size: .68rem; font-weight: 600; letter-spacing: .2em; line-height: 1.5; text-transform: uppercase; }
+      .topbar { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .nav { display: flex; min-height: 94px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .02em; line-height: 1.04; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; font-family: var(--sans); font-size: .7rem; }
+      .brand small { display: block; margin-top: 5px; font-family: var(--sans); font-size: .48rem; letter-spacing: .23em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 24px; }
+      .nav-links a { font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; }
+      .nav-links a:hover { color: #e6c1a8; }
+      .nav-cta { padding: 14px 19px; border: 1px solid rgba(255,255,255,.65); }
+      .menu-toggle { display: none; padding: 10px 0 10px 10px; color: #fff; border: 0; background: transparent; font-size: .75rem; letter-spacing: .13em; text-transform: uppercase; }
+      .hero {
+        min-height: min(700px, 88svh);
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(13,25,19,.78), rgba(13,25,19,.18)),
+          url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/5bd4cfc0c_generated_image.png") center 43% / cover;
+      }
+      .hero-content { max-width: 800px; padding: 145px 0 75px; }
+      .hero .eyebrow { color: #e3c2a9; }
+      h1 { margin: 22px 0; font-size: clamp(3.8rem, 8vw, 7.4rem); letter-spacing: -.055em; line-height: .92; }
+      h1 em { color: #e3c2a9; font-style: italic; }
+      .hero-copy { max-width: 620px; margin: 0; color: rgba(255,255,255,.84); font-size: .98rem; line-height: 1.8; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; border: 1px solid transparent; font-size: .67rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .button-light { color: var(--forest); background: #f6f1e7; }
+      .button-outline { color: var(--forest); border-color: var(--forest); background: transparent; }
+      .button-outline:hover { color: #fff; background: var(--forest); }
+      .button-dark { color: #fff; border-color: rgba(255,255,255,.72); }
+      .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; padding-block: 95px 100px; }
+      .section-label { color: var(--clay); }
+      h2 { margin: 17px 0 0; font-size: clamp(2.6rem, 5vw, 4.7rem); letter-spacing: -.045em; line-height: .99; }
+      h2 em { color: var(--moss); font-style: italic; }
+      .prose { max-width: 700px; color: #667066; font-size: .9rem; line-height: 1.85; }
+      .prose p { margin: 0 0 16px; }
+      .notice { margin-top: 19px; padding: 17px 19px; border-left: 3px solid var(--clay); background: var(--sand); color: #555f54; font-size: .8rem; line-height: 1.7; }
+      .route-section { padding-block: 90px 100px; background: var(--sand); }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 31px; }
+      .section-head > p { max-width: 420px; margin: 0 0 4px; color: #6b7169; font-size: .84rem; line-height: 1.7; }
+      .route-filters { display: flex; gap: 9px; margin-bottom: 24px; overflow-x: auto; }
+      .filter { flex: 0 0 auto; padding: 10px 15px; color: #616960; border: 1px solid rgba(29,41,33,.2); border-radius: 99px; background: transparent; cursor: pointer; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
+      .filter[aria-pressed="true"], .filter:hover { color: #fff; border-color: var(--forest); background: var(--forest); }
+      .route-grid { display: grid; grid-template-columns: repeat(2, 1fr); align-items: start; gap: 18px; }
+      .route-card { min-width: 0; padding: 25px; background: var(--paper); }
+      .route-card.recommended { outline: 1px solid var(--clay); outline-offset: -1px; }
+      .recommended-label { display: inline-block; margin-bottom: 12px; padding: 7px 9px; color: #fff; background: var(--moss); font-size: .56rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .route-card[hidden] { display: none; }
+      .route-top { display: flex; justify-content: space-between; gap: 12px; color: #72796f; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
+      .route-card h3 { margin: 16px 0 8px; font-size: 1.7rem; letter-spacing: -.025em; line-height: 1.12; }
+      .route-card h4 { margin: 0 0 15px; color: var(--moss); font-size: .84rem; font-weight: 500; }
+      .route-card > p { margin: 0; color: #687166; font-size: .81rem; line-height: 1.7; }
+      .route-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+      .fact-label { display: block; margin-bottom: 4px; color: #7a8077; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; }
+      .fact-value { color: #424d43; font-size: .72rem; }
+      .route-card details { margin-top: 18px; border-top: 1px solid var(--line); }
+      .route-card summary { padding: 15px 0 0; cursor: pointer; font-size: .65rem; font-weight: 600; letter-spacing: .1em; list-style-position: inside; text-transform: uppercase; }
+      .route-card summary:hover { color: var(--clay); }
+      .day-list { display: grid; margin: 14px 0 0; padding: 0; list-style: none; }
+      .day { padding: 15px 0; border-top: 1px solid var(--line); }
+      .day-label { color: var(--clay); font-size: .59rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .day h5 { margin: 7px 0; font-family: var(--serif); font-size: 1.12rem; font-weight: 400; }
+      .day p { margin: 0; color: #697267; font-size: .76rem; line-height: 1.7; }
+      .day-facts { margin-top: 8px !important; color: #777e74 !important; font-size: .67rem !important; }
+      .route-highlights { margin-top: 18px; padding: 14px; background: var(--sand); }
+      .route-highlights strong { display: block; margin-bottom: 6px; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+      .route-highlights p { margin: 0; color: #687166; font-size: .74rem; line-height: 1.65; }
+      .quote-link { display: inline-flex; margin-top: 17px; padding: 12px 14px; color: #fff; background: var(--forest); font-size: .63rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+      .quote-link:hover { background: var(--moss); }
+      .safety { padding-block: 95px 100px; color: #f5f0e6; background: var(--forest); }
+      .safety-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: 80px; }
+      .safety .section-label { color: #d3a384; }
+      .safety h2 em { color: #d3a384; }
+      .safety .prose { color: rgba(245,240,230,.75); }
+      .safety-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 25px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .safety-list li { padding-top: 12px; border-top: 1px solid rgba(255,255,255,.2); color: rgba(245,240,230,.84); font-size: .77rem; line-height: 1.6; }
+      .inclusions { padding-block: 86px 92px; }
+      .inclusion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+      .inclusion-grid h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+      .inclusion-grid ul { display: grid; gap: 10px; margin: 22px 0 0; padding-left: 19px; color: #687166; font-size: .81rem; line-height: 1.65; }
+      .season-section { padding-block: 85px 90px; background: var(--sand); }
+      .season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 30px; }
+      .season-card { padding: 21px; border-top: 1px solid var(--line); background: var(--paper); }
+      .season-card h3 { margin: 0 0 9px; font-size: 1.2rem; font-weight: 400; }
+      .season-card p { margin: 0; color: #687166; font-size: .78rem; line-height: 1.7; }
+      .season-note { margin: 20px 0 0; color: #687166; font-size: .75rem; line-height: 1.65; }
+      .closing { padding-block: 80px; text-align: center; background: var(--sand); }
+      .closing h2 { max-width: 800px; margin-inline: auto; }
+      .closing p:not(.eyebrow) { max-width: 650px; margin: 18px auto 23px; color: #687166; font-size: .86rem; line-height: 1.8; }
+      .footer { padding-block: 28px; color: rgba(245,240,230,.72); background: #111b15; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .footer .brand { color: #fff; font-size: .95rem; }
+      .footer .brand-mark { width: 31px; height: 31px; }
+      .footer-note { font-size: .68rem; }
+      .footer-links { display: flex; gap: 18px; font-size: .65rem; letter-spacing: .09em; text-transform: uppercase; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 1000px) {
+        .nav-links { gap: 13px; }
+        .nav-links a { font-size: .59rem; }
+        .route-grid { grid-template-columns: repeat(2, 1fr); }
+        .season-grid { grid-template-columns: repeat(2, 1fr); }
+        .intro, .safety-grid { gap: 48px; }
+      }
+      @media (max-width: 1100px) and (min-width: 651px) {
+        .nav { min-height: 82px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 82px; right: 32px; left: 32px; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+      }
+      @media (max-width: 650px) {
+        .wrap { width: min(100% - 40px, 520px); }
+        .nav { min-height: 76px; }
+        .brand { font-size: .96rem; }
+        .brand-mark { width: 32px; height: 32px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 76px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+        .hero { min-height: 640px; min-height: 85svh; background-position: 58% center; }
+        .hero-content { padding: 120px 0 70px; }
+        h1 { font-size: clamp(3.5rem, 15vw, 5.3rem); }
+        .hero-copy { font-size: .9rem; }
+        .intro, .safety-grid { grid-template-columns: 1fr; gap: 23px; padding-block: 72px 78px; }
+        .route-section { padding-block: 72px 78px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+        .route-grid { grid-template-columns: 1fr; gap: 13px; }
+        .season-grid { grid-template-columns: 1fr; }
+        .route-card { padding: 21px; }
+        .safety { padding-block: 72px 78px; }
+        .safety-list { grid-template-columns: 1fr; }
+        .inclusions { padding-block: 72px; }
+        .inclusion-grid { grid-template-columns: 1fr; gap: 35px; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="index.html#packages">Safari packages</a>
+          <a href="tanzania-circuits.html">Tanzania circuits</a>
+          <a href="cultural-tours.html">Cultural tours</a>
+          <a href="#routes">Kilimanjaro</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a class="nav-cta" href="index.html?experience=Kilimanjaro%20Climbing#contact">Request a quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-content">
+          <p class="eyebrow">Cinematic Wonder Africa Safaris · Experience Africa. Discover the Wonder.</p>
+          <h1 class="serif">Kilimanjaro.<br>The journey to the <em>roof of Africa.</em></h1>
+          <p class="hero-copy">Discover the adventure of climbing Mount Kilimanjaro, Africa's highest mountain at 5,895 meters. From lush rainforest and volcanic landscapes to views above the clouds, each route offers a different journey.</p>
+          <div class="hero-actions"><a class="button button-light" href="#routes">Explore climbing routes <span aria-hidden="true">-&gt;</span></a><a class="button button-dark" href="index.html?experience=Kilimanjaro%20Climbing#contact">Plan your climb</a></div>
+        </div>
+      </section>
+
+      <section class="intro wrap">
+        <div><p class="eyebrow section-label">Choose your route</p><h2 class="serif">Four ways up.<br><em>One unforgettable mountain.</em></h2></div>
+        <div class="prose">
+          <p>Choose between six-day and seven-day Machame itineraries, the scenic eight-day Lemosho route, and the traditional six-day Marangu hut route. The seven-day Machame and eight-day Lemosho options allow more acclimatization time than their shorter alternatives, though altitude illness remains a risk on every route.</p>
+          <p>These are sample itineraries for planning and quotation. Route conditions, park rules, campsite availability, equipment and safety arrangements must be confirmed with the licensed operator for your dates.</p>
+          <div class="notice"><strong>Summit success is never guaranteed.</strong> The guide's safety decisions take priority over reaching the summit. Consider the longer itinerary when your schedule allows more acclimatization time.</div>
+        </div>
+      </section>
+
+      <section class="route-section" id="routes">
+        <div class="wrap">
+          <div class="section-head"><div><p class="eyebrow section-label">Sample climbing packages</p><h2 class="serif">Find your Kilimanjaro route.</h2></div><p>Open each route for a suggested day-by-day outline, elevation and hiking details. Route times and distances are approximate.</p></div>
+          <div class="route-filters" role="group" aria-label="Filter climbing routes">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">All routes</button>
+            <button class="filter" type="button" data-filter="camping" aria-pressed="false">Camping</button>
+            <button class="filter" type="button" data-filter="hut" aria-pressed="false">Mountain huts</button>
+          </div>
+          <div class="route-grid" id="route-grid"></div>
+        </div>
+      </section>
+
+      <section class="safety">
+        <div class="wrap safety-grid">
+          <div><p class="eyebrow section-label">Important climbing information</p><h2 class="serif">The summit is a goal.<br><em>Your safety comes first.</em></h2></div>
+          <div class="prose">
+            <p>Kilimanjaro climbs involve significant altitude exposure and physical exertion. Prepare appropriately and seek advice from a healthcare professional familiar with high-altitude travel.</p>
+            <ul class="safety-list">
+              <li>Obtain travel insurance covering trekking to your planned altitude and emergency evacuation.</li>
+              <li>Discuss fitness, health and altitude concerns with a qualified healthcare professional before travel.</li>
+              <li>Follow guide instructions, weather assessments and the agreed safety plan.</li>
+              <li>Be ready to turn back or descend if the guide considers conditions unsafe.</li>
+              <li>Summit success cannot be guaranteed and depends on many factors.</li>
+              <li>Confirm emergency response, evacuation arrangements and equipment in the booking agreement.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="season-section">
+        <div class="wrap">
+          <div class="section-head"><div><p class="eyebrow section-label">Plan your climb</p><h2 class="serif">Kilimanjaro through the seasons.</h2></div><p>Mountain weather can change quickly. Confirm current conditions and route advice with your licensed operator before choosing dates.</p></div>
+          <div class="season-grid">
+            <article class="season-card"><h3 class="serif">January–March</h3><p>Often suitable trekking conditions, though temperatures can be cold at higher elevations.</p></article>
+            <article class="season-card"><h3 class="serif">June–October</h3><p>A popular climbing period that generally has relatively dry conditions.</p></article>
+            <article class="season-card"><h3 class="serif">April–May</h3><p>Typically wetter, so some trails may be muddy and slippery.</p></article>
+            <article class="season-card"><h3 class="serif">November–December</h3><p>Conditions vary and seasonal rainfall is possible.</p></article>
+          </div>
+          <p class="season-note">Weather can change rapidly at any time of year. These are general seasonal patterns, not a forecast or guarantee of trail conditions.</p>
+        </div>
+      </section>
+
+      <section class="inclusions wrap">
+        <div class="section-head"><div><p class="eyebrow section-label">Before you book</p><h2 class="serif">Understand your climbing quote.</h2></div><p>Inclusions vary by route and operator. Ask for the confirmed written list before making arrangements.</p></div>
+        <div class="inclusion-grid">
+          <div><h2 class="serif">May be included</h2><ul><li>Licensed mountain guides and support crew, as specified.</li><li>Kilimanjaro National Park fees.</li><li>Camping equipment or mountain hut accommodation, depending on route.</li><li>Meals during the climb and drinking water prepared according to operator procedures.</li><li>Transfers between hotel and mountain gates.</li><li>Mountain safety equipment and emergency arrangements specified in the agreement.</li></ul></div>
+          <div><h2 class="serif">Usually not included</h2><ul><li>International flights and Tanzania visa fees.</li><li>Personal travel insurance and climbing clothing or equipment.</li><li>Guide and porter tips.</li><li>Alcoholic beverages and personal expenses.</li><li>Hotel accommodation before and after the climb unless specified.</li><li>Additional activities outside the confirmed itinerary.</li></ul></div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="wrap"><p class="eyebrow section-label">Your journey to the roof of Africa begins here</p><h2 class="serif">Choose your route. Start with a conversation.</h2><p>Tell us your preferred route, travel dates and group size. We'll help you explore suitable options and confirm details with the relevant climbing provider.</p><a class="button button-outline" href="index.html?experience=Kilimanjaro%20Climbing#contact">Request your personalized climbing quote <span aria-hidden="true">-&gt;</span></a></div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+      <span class="footer-note">Experience Africa. Discover the Wonder.</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About us</a><a href="cultural-tours.html">Cultural tours</a><a href="index.html#contact">Contact</a></div>
+    </div></footer>
+
+    <script>
+      const routes = [
+        {
+          name: "7-Day Machame Route",
+          subtitle: "Journey to the Roof of Africa",
+          duration: "7 days / 6 nights",
+          difficulty: "Challenging",
+          accommodation: "Mountain camping",
+          filter: "camping",
+          recommended: true,
+          overview: "The Machame or “Whiskey Route” is known for dramatic scenery and diverse landscapes. Over seven days, travel through rainforest, moorland, volcanic landscapes and alpine desert. Its longer schedule allows more acclimatization time than the six-day version, but altitude illness remains a risk.",
+          highlights: "Rainforest · Shira Plateau · Lava Tower acclimatization · Barranco Wall · Uhuru Peak summit attempt",
+          days: [
+            ["Day 1", "Machame Gate to Machame Camp", "Drive from your hotel in Moshi or Arusha to Machame Gate. Complete park registration and meet your mountain guides, porters and support crew. Begin trekking through tropical rainforest, then arrive at Machame Camp for dinner and overnight rest.", "Elevation: approx. 1,800–3,000 m · Hiking: 5–7 hours · Distance: approx. 11 km · Stay: Machame Camp"],
+            ["Day 2", "Machame Camp to Shira Camp", "Continue through the forest's upper reaches toward open moorland. Enjoy views of the Shira Plateau as the vegetation changes with elevation. Arrive at Shira Camp for dinner and overnight rest.", "Elevation: approx. 3,000–3,850 m · Hiking: 4–6 hours · Distance: approx. 5 km · Stay: Shira Camp"],
+            ["Day 3", "Shira Camp to Barranco Camp via Lava Tower", "Climb toward Lava Tower at approximately 4,600 m, then descend to Barranco Camp. This high-altitude day follows the route principle of climbing higher during the day and sleeping lower. The guide will assess conditions and your wellbeing.", "Elevation: approx. 3,850–4,600 m, descending to 3,950 m · Hiking: 6–8 hours · Distance: approx. 10 km · Stay: Barranco Camp"],
+            ["Day 4", "Barranco Camp to Karanga Camp", "Climb the Barranco Wall under your mountain guide's supervision. Continue through valleys and ridges to Karanga Camp. Spend the afternoon resting and preparing for higher elevations.", "Elevation: approx. 3,950–4,000 m · Hiking: 4–5 hours · Distance: approx. 5 km · Stay: Karanga Camp"],
+            ["Day 5", "Karanga Camp to Barafu Camp", "Continue toward Barafu Camp, the base for the summit attempt. Arrive with time to eat and rest. Your guide will brief the group on the planned summit attempt, weather assessment and safety procedures.", "Elevation: approx. 4,000–4,670 m · Hiking: 3–5 hours · Distance: approx. 4 km · Stay: Barafu Camp"],
+            ["Day 6", "Barafu Camp to Uhuru Peak, descend to Mweka Camp", "Begin the summit attempt late at night or around midnight. Climb slowly toward Stella Point and continue to Uhuru Peak if your guide determines weather, altitude and your health permit. Descend toward Barafu Camp and continue to Mweka Camp. This is the longest and most demanding day; your guide may require an earlier descent for safety.", "Summit: 5,895 m · Hiking: approx. 12–16 hours total · Distance: approx. 17 km · Stay: Mweka Camp"],
+            ["Day 7", "Mweka Camp to Mweka Gate", "After breakfast, descend through rainforest to Mweka Gate. Complete park exit procedures, meet your transfer and return to your hotel in Moshi or Arusha.", "Elevation: approx. 3,100–1,640 m · Hiking: 3–5 hours · Distance: approx. 10 km"]
+          ]
+        },
+        {
+          name: "6-Day Machame Route",
+          subtitle: "The scenic Kilimanjaro adventure",
+          duration: "6 days / 5 nights",
+          difficulty: "Challenging",
+          accommodation: "Mountain camping",
+          filter: "camping",
+          overview: "The scenic Machame or “Whiskey Route” crosses rainforest, moorland, alpine desert and dramatic mountain landscapes. This shorter itinerary is physically demanding and allows less acclimatization time than the seven-day version; consider the longer option if your schedule allows.",
+          highlights: "Rainforest · Shira Plateau · Lava Tower · Barranco Wall · Uhuru Peak summit attempt",
+          days: [
+            ["Day 1", "Machame Gate to Machame Camp", "Travel to Machame Gate, register and meet the mountain support team. Hike through lush rainforest to Machame Camp.", "Elevation: 1,800–3,000 m · Hiking: 5–7 hours · Distance: approx. 11 km · Stay: Machame Camp"],
+            ["Day 2", "Machame Camp to Shira Camp", "Continue through changing landscapes as forest gives way to moorland, with views toward the Shira Plateau.", "Elevation: 3,000–3,850 m · Hiking: 4–6 hours · Distance: approx. 5 km · Stay: Shira Camp"],
+            ["Day 3", "Shira Camp to Barranco Camp via Lava Tower", "Hike toward Lava Tower at approximately 4,600 m before descending to Barranco Camp. The route gains altitude during the day before sleeping lower.", "Elevation: 3,850–4,600–3,950 m · Hiking: 6–8 hours · Distance: approx. 10 km · Stay: Barranco Camp"],
+            ["Day 4", "Barranco Camp to Barafu Camp", "Climb the Barranco Wall and continue through Karanga Valley toward Barafu Camp. This is a demanding day that combines sections normally completed over two days on the seven-day itinerary. Rest and prepare for the summit attempt.", "Elevation: approx. 3,950–4,670 m · Hiking: 8–10 hours · Distance: approx. 9 km · Stay: Barafu Camp"],
+            ["Day 5", "Barafu Camp to Uhuru Peak, descend to Mweka Camp", "Begin the summit attempt around midnight. Climb toward Stella Point and continue to Uhuru Peak if weather, altitude and your health permit. Descend via Barafu Camp to Mweka Camp.", "Summit: 5,895 m · Hiking: approx. 12–16 hours · Distance: approx. 17 km · Stay: Mweka Camp"],
+            ["Day 6", "Mweka Camp to Mweka Gate", "Descend through rainforest toward Mweka Gate. Complete park exit procedures and return to your hotel in Moshi or Arusha.", "Hiking: 3–5 hours · Distance: approx. 10 km"]
+          ]
+        },
+        {
+          name: "8-Day Lemosho Route",
+          subtitle: "The ultimate scenic expedition",
+          duration: "8 days / 7 nights",
+          difficulty: "Challenging",
+          accommodation: "Mountain camping",
+          filter: "camping",
+          overview: "Lemosho is known for its scenery, quieter western approach and gradual progression across Kilimanjaro's ecological zones. Its eight-day schedule provides more time for acclimatization than many shorter routes.",
+          highlights: "Western approach · Shira Plateau · Lava Tower · Barranco Wall · extra acclimatization time",
+          days: [
+            ["Day 1", "Londorossi Gate to Mti Mkubwa Camp", "Travel to Londorossi Gate for registration and continue to the designated trailhead. Begin hiking through rainforest to Mti Mkubwa Camp.", "Elevation: approx. 2,100–2,650 m · Hiking: 3–4 hours · Distance: approx. 6 km · Stay: Mti Mkubwa Camp"],
+            ["Day 2", "Mti Mkubwa Camp to Shira 1 Camp", "Continue through forest and into open moorland as you approach the Shira Plateau.", "Elevation: 2,650–3,500 m · Hiking: 5–7 hours · Distance: approx. 8 km · Stay: Shira 1 Camp"],
+            ["Day 3", "Shira 1 Camp to Shira 2 Camp", "Trek across the Shira Plateau. This shorter walking day allows additional time to rest and acclimatize.", "Elevation: 3,500–3,850 m · Hiking: 3–5 hours · Distance: approx. 7 km · Stay: Shira 2 Camp"],
+            ["Day 4", "Shira 2 Camp to Barranco Camp via Lava Tower", "Climb toward Lava Tower before descending to Barranco Camp through dramatic alpine landscapes.", "Elevation: 3,850–4,600–3,950 m · Hiking: 6–8 hours · Distance: approx. 10 km · Stay: Barranco Camp"],
+            ["Day 5", "Barranco Camp to Karanga Camp", "Climb the Barranco Wall with your guide and continue through scenic valleys toward Karanga Camp. Rest and prepare for the next stages.", "Elevation: approx. 3,950–4,000 m · Hiking: 4–5 hours · Distance: approx. 5 km · Stay: Karanga Camp"],
+            ["Day 6", "Karanga Camp to Barafu Camp", "Continue through alpine desert toward Barafu Camp. Arrive with time to rest, eat and prepare for the summit attempt.", "Elevation: approx. 4,000–4,670 m · Hiking: 3–5 hours · Distance: approx. 4 km · Stay: Barafu Camp"],
+            ["Day 7", "Barafu Camp to Uhuru Peak, descend to Mweka Camp", "Begin around midnight and ascend toward Stella Point and Uhuru Peak if your guide determines conditions permit. Descend toward Mweka Camp.", "Summit: 5,895 m · Hiking: approx. 12–16 hours · Distance: approx. 17 km · Stay: Mweka Camp"],
+            ["Day 8", "Mweka Camp to Mweka Gate", "Make your final descent through rainforest, arrive at Mweka Gate and return to Moshi or Arusha.", "Hiking: 3–5 hours · Distance: approx. 10 km"]
+          ]
+        },
+        {
+          name: "6-Day Marangu Route",
+          subtitle: "The classic hut-to-hut adventure",
+          duration: "6 days / 5 nights",
+          difficulty: "Challenging",
+          accommodation: "Mountain huts",
+          filter: "hut",
+          overview: "The traditional Marangu or “Coca-Cola Route” uses mountain huts rather than tents. This itinerary includes an additional acclimatization day at Horombo Hut. The altitude and summit attempt remain serious challenges.",
+          highlights: "Traditional Marangu trail · hut accommodation · Horombo acclimatization day · Mawenzi and Kibo views",
+          days: [
+            ["Day 1", "Marangu Gate to Mandara Hut", "Travel to Marangu Gate, complete registration and trek through rainforest to Mandara Hut.", "Elevation: approx. 1,860–2,700 m · Hiking: 4–5 hours · Distance: approx. 8 km · Stay: Mandara Hut"],
+            ["Day 2", "Mandara Hut to Horombo Hut", "Continue through changing vegetation as rainforest gives way to moorland, with views of Kilimanjaro's peaks.", "Elevation: 2,700–3,720 m · Hiking: 5–7 hours · Distance: approx. 12 km · Stay: Horombo Hut"],
+            ["Day 3", "Acclimatization day at Horombo Hut", "Spend the day acclimatizing. Depending on your guide's assessment and your condition, take an optional hike toward Zebra Rocks or another suitable viewpoint.", "Elevation: approx. 3,720 m · Optional hiking: 3–5 hours · Stay: Horombo Hut"],
+            ["Day 4", "Horombo Hut to Kibo Hut", "Cross the alpine desert known as the Saddle between Mawenzi and Kibo. Arrive at Kibo Hut, have an early meal and prepare for the summit attempt.", "Elevation: 3,720–4,700 m · Hiking: 5–7 hours · Distance: approx. 10 km · Stay: Kibo Hut"],
+            ["Day 5", "Kibo Hut to Uhuru Peak, descend to Horombo Hut", "Begin around midnight and climb toward Gilman's Point. Continue to Uhuru Peak if your guide determines conditions are safe, then descend to Kibo Hut for a short rest before continuing to Horombo Hut.", "Summit: 5,895 m · Hiking: approx. 12–16 hours · Distance: approx. 22 km · Stay: Horombo Hut"],
+            ["Day 6", "Horombo Hut to Marangu Gate", "Descend through moorland and rainforest, passing Mandara Hut before reaching Marangu Gate. Complete exit procedures and return to your hotel.", "Hiking: 5–7 hours · Distance: approx. 20 km"]
+          ]
+        }
+      ];
+
+      const routeGrid = document.querySelector("#route-grid");
+      function fact(label, value) {
+        const item = document.createElement("div");
+        const name = document.createElement("span");
+        name.className = "fact-label";
+        name.textContent = label;
+        const content = document.createElement("span");
+        content.className = "fact-value";
+        content.textContent = value;
+        item.append(name, content);
+        return item;
+      }
+      function createRouteCard(route) {
+        const card = document.createElement("article");
+        card.className = "route-card";
+        card.dataset.filter = route.filter;
+        const top = document.createElement("div");
+        top.className = "route-top";
+        const length = document.createElement("span");
+        length.textContent = route.duration;
+        const difficulty = document.createElement("span");
+        difficulty.textContent = route.difficulty;
+        top.append(length, difficulty);
+        const title = document.createElement("h3");
+        title.className = "serif";
+        title.textContent = route.name;
+        if (route.recommended) {
+          card.classList.add("recommended");
+          const badge = document.createElement("span");
+          badge.className = "recommended-label";
+          badge.textContent = "Recommended · More acclimatization time";
+          card.append(badge);
+        }
+        const subtitle = document.createElement("h4");
+        subtitle.textContent = route.subtitle;
+        const overview = document.createElement("p");
+        overview.textContent = route.overview;
+        const facts = document.createElement("div");
+        facts.className = "route-facts";
+        facts.append(fact("Starting point", "Moshi or Arusha"), fact("Ending point", "Moshi or Arusha"), fact("Maximum altitude", "5,895 m"), fact("Accommodation", route.accommodation));
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = `View ${route.days.length}-day itinerary`;
+        details.append(summary);
+        const list = document.createElement("ol");
+        list.className = "day-list";
+        route.days.forEach(([labelText, heading, description, detailsText]) => {
+          const item = document.createElement("li");
+          item.className = "day";
+          const label = document.createElement("span");
+          label.className = "day-label";
+          label.textContent = labelText;
+          const dayHeading = document.createElement("h5");
+          dayHeading.textContent = heading;
+          const text = document.createElement("p");
+          text.textContent = description;
+          item.append(label, dayHeading, text);
+          if (detailsText) {
+            const meta = document.createElement("p");
+            meta.className = "day-facts";
+            meta.textContent = detailsText;
+            item.append(meta);
+          }
+          list.append(item);
+        });
+        details.append(list);
+        const highlights = document.createElement("div");
+        highlights.className = "route-highlights";
+        const label = document.createElement("strong");
+        label.textContent = "Route highlights";
+        const text = document.createElement("p");
+        text.textContent = route.highlights;
+        highlights.append(label, text);
+        details.append(highlights);
+        const quote = document.createElement("a");
+        quote.className = "quote-link";
+        quote.href = `index.html?experience=${encodeURIComponent("Kilimanjaro Climbing")}&destination=${encodeURIComponent(route.name)}#contact`;
+        quote.textContent = "Request a personalized quote →";
+        card.append(top, title, subtitle, overview, facts, details, quote);
+        return card;
+      }
+      routes.forEach((route) => routeGrid.append(createRouteCard(route)));
+      document.querySelector(".route-filters").addEventListener("click", (event) => {
+        const button = event.target.closest(".filter");
+        if (!button) return;
+        const filter = button.dataset.filter;
+        document.querySelectorAll(".filter").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        routeGrid.querySelectorAll(".route-card").forEach((card) => {
+          card.hidden = filter !== "all" && card.dataset.filter !== filter;
+        });
+      });
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("open", !isOpen);
+      });
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

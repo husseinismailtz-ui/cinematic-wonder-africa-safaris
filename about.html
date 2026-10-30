@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251e">
+    <meta name="description" content="Discover Cinematic Wonder Africa Safaris, a Tanzania-focused travel service helping you explore wildlife, culture, mountains and Zanzibar.">
+    <title>About Us | Cinematic Wonder Africa Safaris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2921;
+        --forest: #17251e;
+        --moss: #57664c;
+        --sand: #eee9dc;
+        --paper: #f8f6f0;
+        --clay: #bd7958;
+        --line: rgba(29, 41, 33, .18);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+      .serif { font-family: var(--serif); font-weight: 400; }
+      .eyebrow { margin: 0; font-size: .68rem; font-weight: 600; letter-spacing: .2em; line-height: 1.5; text-transform: uppercase; }
+      .topbar { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .nav { display: flex; min-height: 94px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .02em; line-height: 1.04; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; font-family: var(--sans); font-size: .7rem; letter-spacing: .05em; }
+      .brand small { display: block; margin-top: 5px; font-family: var(--sans); font-size: .48rem; letter-spacing: .23em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 30px; }
+      .nav-links a { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+      .nav-links a:hover { color: #e6c1a8; }
+      .nav-cta { padding: 14px 19px; border: 1px solid rgba(255,255,255,.65); transition: background .2s, color .2s; }
+      .nav-cta:hover { color: var(--forest); background: #fff; }
+      .menu-toggle { display: none; padding: 10px 0 10px 10px; color: #fff; border: 0; background: transparent; font-size: .75rem; letter-spacing: .13em; text-transform: uppercase; }
+      .hero {
+        position: relative;
+        display: flex;
+        min-height: min(690px, 85svh);
+        align-items: center;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(13,25,19,.78), rgba(13,25,19,.2)),
+          url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/f89a36a1b_generated_image.png") center 48% / cover;
+      }
+      .hero-copy { max-width: 760px; padding: 145px 0 75px; }
+      .hero .eyebrow { color: #e3c2a9; }
+      h1 { margin: 22px 0 22px; font-size: clamp(3.8rem, 8vw, 7.4rem); letter-spacing: -.055em; line-height: .92; }
+      h1 em { color: #e3c2a9; font-style: italic; }
+      .hero p:last-child { max-width: 540px; margin: 0; color: rgba(255,255,255,.84); font-size: 1rem; line-height: 1.8; }
+      .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 15px; padding: 0 21px; border: 1px solid transparent; font-size: .68rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; transition: background .2s, color .2s; }
+      .button-light { color: var(--forest); background: #f6f1e7; }
+      .button-light:hover { background: #e7d4c3; }
+      .button-outline { color: var(--forest); border-color: var(--forest); background: transparent; }
+      .button-outline:hover { color: #fff; background: var(--forest); }
+      .button-dark { color: #fff; border-color: rgba(255,255,255,.7); }
+      .button-dark:hover { color: var(--forest); background: #fff; }
+      .story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; padding-block: 110px 115px; }
+      .section-label { color: var(--clay); }
+      h2 { margin: 18px 0 0; font-size: clamp(2.7rem, 5vw, 4.7rem); letter-spacing: -.045em; line-height: .99; }
+      h2 em { color: var(--moss); font-style: italic; }
+      .prose { max-width: 650px; color: #667066; font-size: .92rem; line-height: 1.9; }
+      .prose p { margin: 0 0 18px; }
+      .why { padding-block: 90px 100px; background: var(--sand); }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+      .section-head > p { max-width: 350px; margin: 0 0 5px; color: #6b7169; font-size: .88rem; line-height: 1.75; }
+      .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 43px; border-top: 1px solid var(--line); }
+      .feature { min-height: 225px; padding: 25px 22px 24px 0; border-bottom: 1px solid var(--line); }
+      .feature:not(:nth-child(4n)) { border-right: 1px solid var(--line); }
+      .feature:not(:nth-child(4n+1)) { padding-left: 22px; }
+      .feature-mark { color: var(--clay); font-size: .65rem; letter-spacing: .12em; }
+      .feature h3 { margin: 25px 0 10px; font-size: 1.4rem; font-weight: 400; }
+      .feature p { margin: 0; color: #6b7169; font-size: .8rem; line-height: 1.7; }
+      .explore { padding-block: 110px 115px; }
+      .explore-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 75px; margin-top: 45px; }
+      .explore-item { display: grid; grid-template-columns: 48px 1fr; gap: 15px; padding: 19px 0; border-top: 1px solid var(--line); }
+      .explore-number { padding-top: 5px; color: var(--clay); font-size: .65rem; letter-spacing: .1em; }
+      .explore-item h3 { margin: 0 0 7px; font-size: 1.3rem; font-weight: 400; }
+      .explore-item p { margin: 0; color: #6b7169; font-size: .8rem; line-height: 1.7; }
+      .commitment { padding-block: 98px; color: #f5f0e6; background: var(--forest); }
+      .commitment-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 90px; align-items: center; }
+      .commitment .section-label { color: #d3a384; }
+      .commitment h2 { max-width: 580px; }
+      .commitment h2 em { color: #d3a384; }
+      .commitment .prose { color: rgba(245,240,230,.72); }
+      .contact { padding-block: 100px; text-align: center; }
+      .contact .section-label { color: var(--clay); }
+      .contact h2 { max-width: 760px; margin: 18px auto 16px; }
+      .contact > .wrap > p:not(.eyebrow) { max-width: 620px; margin: 0 auto; color: #6b7169; font-size: .9rem; line-height: 1.8; }
+      .contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .contact-details { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 26px; margin-top: 27px; color: #6b7169; font-size: .8rem; }
+      .contact-details a { text-decoration: underline; text-underline-offset: 3px; }
+      .footer { padding-block: 27px; color: rgba(245,240,230,.72); background: #111b15; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .footer .brand { color: #fff; font-size: .95rem; }
+      .footer .brand-mark { width: 31px; height: 31px; }
+      .footer-note { font-size: .67rem; letter-spacing: .05em; }
+      .footer-links { display: flex; gap: 20px; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 900px) {
+        .nav-links { gap: 17px; }
+        .story { gap: 55px; }
+        .feature-grid { grid-template-columns: repeat(2, 1fr); }
+        .feature:not(:nth-child(4n)) { border-right: 0; }
+        .feature:not(:nth-child(4n+1)) { padding-left: 0; }
+        .feature:nth-child(odd) { padding-right: 20px; border-right: 1px solid var(--line); }
+        .feature:nth-child(even) { padding-left: 20px; }
+        .explore-grid { gap: 40px; }
+      }
+      @media (max-width: 650px) {
+        .wrap { width: min(100% - 40px, 520px); }
+        .nav { min-height: 76px; }
+        .brand { font-size: .96rem; }
+        .brand-mark { width: 32px; height: 32px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 76px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+        .hero { min-height: 660px; min-height: 85svh; background-position: 58% center; }
+        .hero-copy { padding: 120px 0 75px; }
+        h1 { font-size: clamp(3.8rem, 15vw, 5.5rem); }
+        .hero p:last-child { font-size: .9rem; }
+        .story { grid-template-columns: 1fr; gap: 25px; padding-block: 75px 80px; }
+        .why { padding-block: 75px 80px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+        .feature-grid { margin-top: 28px; }
+        .feature { min-height: 205px; }
+        .explore { padding-block: 75px 80px; }
+        .explore-grid { grid-template-columns: 1fr; gap: 0; margin-top: 28px; }
+        .commitment { padding-block: 76px; }
+        .commitment-grid { grid-template-columns: 1fr; gap: 25px; }
+        .contact { padding-block: 78px; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home">
+          <span class="brand-mark" aria-hidden="true">CW</span>
+          <span>Cinematic Wonder<small>Africa Safaris</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
+          <a href="index.html#journeys">Journeys</a>
+          <a href="#story">Our story</a>
+          <a href="tanzania-circuits.html">Tanzania circuits</a>
+          <a href="cultural-tours.html">Cultural tours</a>
+          <a href="kilimanjaro.html">Kilimanjaro</a>
+          <a href="index.html#experiences">Experiences</a>
+          <a class="nav-cta" href="#contact">Plan your safari</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="about-title">
+        <div class="wrap hero-copy">
+          <p class="eyebrow">Cinematic Wonder Africa Safaris</p>
+          <h1 class="serif" id="about-title">Your African story<br>begins <em>here.</em></h1>
+          <p>Discover Tanzania. Experience the wonder. Create memories that last a lifetime.</p>
+        </div>
+      </section>
+
+      <section class="story wrap" id="story">
+        <div>
+          <p class="eyebrow section-label">Welcome to Tanzania</p>
+          <h2 class="serif">Inspired by Africa.<br><em>Created for you.</em></h2>
+        </div>
+        <div class="prose">
+          <p>Welcome to Cinematic Wonder Africa Safaris, your gateway to the extraordinary beauty, wildlife and cultures of Tanzania. From the golden plains of the Serengeti to the landscapes of Ngorongoro, we believe a journey here should be more than a holiday: it should stay with you long after you return home.</p>
+          <p>Based in Arusha, Tanzania, we are passionate about helping travelers discover the nature, people and spirit that make this destination special. Whether you dream of the Great Wildebeest Migration, a Kilimanjaro climb, cultural experiences or the beaches of Zanzibar, we help you explore the possibilities for your trip.</p>
+          <p>Our vision is simple: to make each journey meaningful, personal and memorable. Because the best journeys are not only about the places you visit, but the stories you bring home.</p>
+        </div>
+      </section>
+
+      <section class="why">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow section-label">A thoughtful way to travel</p>
+              <h2 class="serif">Why travel with us?</h2>
+            </div>
+            <p>Every traveler arrives with a different idea of wonder. Start with what inspires you, and explore a Tanzania journey that fits.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <span class="feature-mark">01 / PLACE</span>
+              <h3 class="serif">Authentic experiences</h3>
+              <p>Discover Tanzania's landscapes, wildlife and cultural heritage through experiences rooted in a strong sense of place.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-mark">02 / WILDLIFE</span>
+              <h3 class="serif">Remarkable safaris</h3>
+              <p>Explore celebrated destinations such as Serengeti, Ngorongoro, Tarangire and Lake Manyara, each with its own character.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-mark">03 / YOUR JOURNEY</span>
+              <h3 class="serif">Options for your style</h3>
+              <p>Consider journeys for private travel, family holidays, romantic escapes or cultural discovery, shaped around your interests and time.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-mark">04 / LOCAL PERSPECTIVE</span>
+              <h3 class="serif">Personal assistance</h3>
+              <p>As a Tanzania-focused travel service based in Arusha, we help you explore suitable options and connect with tourism providers.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="explore wrap" id="explore">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow section-label">Many landscapes, one remarkable country</p>
+            <h2 class="serif">Explore Tanzania<br>your way.</h2>
+          </div>
+          <p>Wildlife, culture, mountain air and the coast: bring together the experiences that speak to you.</p>
+        </div>
+        <div class="explore-grid">
+          <div>
+            <article class="explore-item"><span class="explore-number">01</span><div><h3 class="serif">Wildlife safaris</h3><p>Explore the national parks and look for wildlife in its natural environment.</p></div></article>
+            <article class="explore-item"><span class="explore-number">02</span><div><h3 class="serif">Northern circuit</h3><p>Discover the Serengeti, Ngorongoro, Tarangire and Lake Manyara.</p></div></article>
+            <article class="explore-item"><span class="explore-number">03</span><div><h3 class="serif">Southern circuit</h3><p>Consider the wide wilderness of Nyerere and Ruaha in southern Tanzania.</p></div></article>
+            <article class="explore-item"><span class="explore-number">04</span><div><h3 class="serif">Eastern Tanzania</h3><p>Explore coastal atmosphere, historic destinations, local culture and nature.</p></div></article>
+          </div>
+          <div>
+            <article class="explore-item"><span class="explore-number">05</span><div><h3 class="serif">Western Tanzania</h3><p>Discover remote western landscapes, including chimpanzee habitats in Mahale and Gombe.</p></div></article>
+            <article class="explore-item"><span class="explore-number">06</span><div><h3 class="serif">Culture and community</h3><p>Connect with local heritage, traditions, communities and everyday life.</p></div></article>
+            <article class="explore-item"><span class="explore-number">07</span><div><h3 class="serif">Mount Kilimanjaro</h3><p>Take on Africa's highest mountain and experience its changing landscapes.</p></div></article>
+            <article class="explore-item"><span class="explore-number">08</span><div><h3 class="serif">Safari and Zanzibar</h3><p>Combine wildlife encounters with island beaches, spice heritage and Stone Town.</p></div></article>
+          </div>
+        </div>
+        <p style="margin:32px 0 0"><a class="button button-outline" href="index.html#journeys">Explore our journeys <span aria-hidden="true">-&gt;</span></a></p>
+      </section>
+
+      <section class="commitment">
+        <div class="wrap commitment-grid">
+          <div>
+            <p class="eyebrow section-label">Our commitment to you</p>
+            <h2 class="serif">Every great journey begins with <em>trust.</em></h2>
+          </div>
+          <div class="prose">
+            <p>Our goal is to make planning a Tanzania holiday straightforward, personal and inspiring. We listen to what interests you, help you explore travel options and connect you with tourism providers who can help bring your plans to life.</p>
+            <p>We believe in respecting Tanzania's wildlife, natural environments and cultural heritage. We encourage responsible travel that values local communities and helps preserve the places that make Tanzania remarkable.</p>
+            <p>Our role is to help you explore possibilities and make informed decisions, with confidence and excitement for the journey ahead.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <p class="eyebrow section-label">Your journey. Your story. Your Africa.</p>
+          <h2 class="serif">Africa is waiting.<br><em>Let your story begin.</em></h2>
+          <p>Tell us what inspires you: a wildlife safari, a cultural experience, a Kilimanjaro climb or time on Zanzibar. Your adventure starts with a conversation.</p>
+          <div class="contact-actions">
+            <a class="button button-outline" href="index.html#journeys">Explore safari journeys <span aria-hidden="true">-&gt;</span></a>
+            <a class="button button-light" href="https://wa.me/255741438182?text=Hello%20Cinematic%20Wonder%20Africa%20Safaris%2C%20I%27d%20like%20to%20explore%20a%20trip%20to%20Tanzania." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span aria-hidden="true">-&gt;</span></a>
+          </div>
+          <div class="contact-details">
+            <span>WhatsApp: <a href="https://wa.me/255741438182" target="_blank" rel="noopener noreferrer">+255 741 438 182</a></span>
+            <span>Email: <a href="mailto:info@cinematicwonderafricasafaris.com">info@cinematicwonderafricasafaris.com</a></span>
+            <span>Arusha, Tanzania</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+        <span class="footer-note">Discover Tanzania. Experience the Wonder.</span>
+        <div class="footer-links"><a href="index.html">Home</a><a href="index.html#journeys">Journeys</a><a href="cultural-tours.html">Cultural tours</a><a href="kilimanjaro.html">Kilimanjaro</a><a href="#contact">Contact</a></div>
+      </div>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("open", !isOpen);
+      });
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

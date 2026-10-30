@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251e">
+    <meta name="description" content="Explore four sample Tanzania safari circuits: Northern wildlife parks, Southern wilderness, Western chimpanzee trekking and Eastern waterfalls and coastal heritage.">
+    <title>Tanzania Safari Circuits | Cinematic Wonder Africa Safaris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2921;
+        --forest: #17251e;
+        --moss: #57664c;
+        --sand: #eee9dc;
+        --paper: #f8f6f0;
+        --clay: #bd7958;
+        --line: rgba(29, 41, 33, .18);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+      .serif { font-family: var(--serif); font-weight: 400; }
+      .eyebrow { margin: 0; font-size: .68rem; font-weight: 600; letter-spacing: .2em; line-height: 1.5; text-transform: uppercase; }
+      .topbar { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .nav { display: flex; min-height: 94px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .02em; line-height: 1.04; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; font-family: var(--sans); font-size: .7rem; }
+      .brand small { display: block; margin-top: 5px; font-family: var(--sans); font-size: .48rem; letter-spacing: .23em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 22px; }
+      .nav-links a { font-size: .66rem; letter-spacing: .09em; text-transform: uppercase; }
+      .nav-links a:hover { color: #e6c1a8; }
+      .nav-cta { padding: 14px 19px; border: 1px solid rgba(255,255,255,.65); }
+      .menu-toggle { display: none; padding: 10px 0 10px 10px; color: #fff; border: 0; background: transparent; font-size: .75rem; letter-spacing: .13em; text-transform: uppercase; }
+      .hero {
+        min-height: min(690px, 85svh);
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(13,25,19,.78), rgba(13,25,19,.22)),
+          url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/01180d691_generated_image.png") center 48% / cover;
+      }
+      .hero-content { max-width: 800px; padding: 145px 0 75px; }
+      .hero .eyebrow { color: #e3c2a9; }
+      h1 { margin: 22px 0; font-size: clamp(3.8rem, 8vw, 7.3rem); letter-spacing: -.055em; line-height: .92; }
+      h1 em { color: #e3c2a9; font-style: italic; }
+      .hero-copy { max-width: 620px; margin: 0; color: rgba(255,255,255,.84); font-size: .98rem; line-height: 1.8; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; border: 1px solid transparent; font-size: .67rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .button-light { color: var(--forest); background: #f6f1e7; }
+      .button-outline { color: var(--forest); border-color: var(--forest); background: transparent; }
+      .button-outline:hover { color: #fff; background: var(--forest); }
+      .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; padding-block: 95px 100px; }
+      .section-label { color: var(--clay); }
+      h2 { margin: 17px 0 0; font-size: clamp(2.6rem, 5vw, 4.7rem); letter-spacing: -.045em; line-height: .99; }
+      h2 em { color: var(--moss); font-style: italic; }
+      .prose { max-width: 700px; color: #667066; font-size: .9rem; line-height: 1.85; }
+      .prose p { margin: 0 0 16px; }
+      .notice { margin-top: 19px; padding: 17px 19px; border-left: 3px solid var(--clay); background: var(--sand); color: #555f54; font-size: .8rem; line-height: 1.7; }
+      .circuits { padding-block: 90px 100px; background: var(--sand); }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 32px; }
+      .section-head > p { max-width: 430px; margin: 0 0 4px; color: #6b7169; font-size: .84rem; line-height: 1.7; }
+      .circuit-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 20px; }
+      .circuit-card { min-width: 0; background: var(--paper); }
+      .circuit-cover { min-height: 240px; display: flex; align-items: end; padding: 24px; color: #fff; background-position: center; background-size: cover; }
+      .circuit-card:nth-child(1) .circuit-cover { background-image: linear-gradient(0deg, rgba(14,26,19,.85), rgba(14,26,19,.1)), url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/f89a36a1b_generated_image.png"); }
+      .circuit-card:nth-child(2) .circuit-cover { background-image: linear-gradient(0deg, rgba(14,26,19,.85), rgba(14,26,19,.1)), url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/cc4ab7637_generated_image.png"); }
+      .circuit-card:nth-child(3) .circuit-cover { background-image: linear-gradient(0deg, rgba(14,26,19,.85), rgba(14,26,19,.1)), url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/01180d691_generated_image.png"); }
+      .circuit-card:nth-child(4) .circuit-cover { background-image: linear-gradient(0deg, rgba(14,26,19,.85), rgba(14,26,19,.1)), url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/18d42fcee_generated_image.png"); }
+      .circuit-cover .eyebrow { color: #e3c2a9; }
+      .circuit-cover h3 { margin: 9px 0 0; font-size: 2rem; font-weight: 400; }
+      .circuit-body { padding: 24px; }
+      .circuit-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: #747a70; font-size: .64rem; letter-spacing: .09em; text-transform: uppercase; }
+      .circuit-body h4 { margin: 16px 0 8px; font-size: 1.35rem; font-weight: 400; }
+      .circuit-body > p { margin: 0; color: #687166; font-size: .81rem; line-height: 1.7; }
+      .circuit-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .fact-label { display: block; margin-bottom: 4px; color: #7a8077; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; }
+      .fact-value { color: #424d43; font-size: .73rem; }
+      .circuit-card details { margin-top: 15px; }
+      .circuit-card summary { padding: 4px 0 8px; cursor: pointer; font-size: .66rem; font-weight: 600; letter-spacing: .1em; list-style-position: inside; text-transform: uppercase; }
+      .circuit-card summary:hover { color: var(--clay); }
+      .day-list { display: grid; margin: 8px 0 0; padding: 0; list-style: none; }
+      .day { padding: 15px 0; border-top: 1px solid var(--line); }
+      .day-label { color: var(--clay); font-size: .59rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .day h5 { margin: 7px 0; font-family: var(--serif); font-size: 1.13rem; font-weight: 400; }
+      .day p { margin: 0; color: #697267; font-size: .76rem; line-height: 1.7; }
+      .day-stay { margin-top: 7px !important; color: #777e74 !important; font-size: .68rem !important; }
+      .highlights { margin-top: 14px; padding: 14px; background: var(--sand); }
+      .highlights strong { display: block; margin-bottom: 6px; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; }
+      .highlights p { margin: 0; color: #687166; font-size: .74rem; line-height: 1.65; }
+      .best-time { margin-top: 15px !important; padding: 13px 14px; border-left: 2px solid var(--clay); background: var(--sand); font-size: .75rem !important; }
+      .quote { display: inline-flex; margin-top: 17px; padding: 12px 14px; color: #fff; background: var(--forest); font-size: .63rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+      .quote:hover { background: var(--moss); }
+      .planning { padding-block: 90px 100px; color: #f5f0e6; background: var(--forest); }
+      .planning-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; }
+      .planning .section-label { color: #d3a384; }
+      .planning h2 em { color: #d3a384; }
+      .planning .prose { color: rgba(245,240,230,.75); }
+      .list-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 26px; }
+      .list-grid h3 { margin: 0; color: #fff; font-size: 1.2rem; font-weight: 400; }
+      .list-grid ul { display: grid; gap: 9px; margin: 14px 0 0; padding-left: 18px; color: rgba(245,240,230,.78); font-size: .76rem; line-height: 1.65; }
+      .final-cta { padding-block: 80px; background: var(--sand); text-align: center; }
+      .final-cta h2 { max-width: 800px; margin-inline: auto; }
+      .final-cta p { max-width: 650px; margin: 18px auto 23px; color: #687166; font-size: .86rem; line-height: 1.8; }
+      .footer { padding-block: 28px; color: rgba(245,240,230,.72); background: #111b15; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .footer .brand { color: #fff; font-size: .95rem; }
+      .footer .brand-mark { width: 31px; height: 31px; }
+      .footer-note { font-size: .68rem; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 16px; font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 1050px) {
+        .nav-links { gap: 12px; }
+        .nav-links a { font-size: .57rem; }
+      }
+      @media (max-width: 1100px) and (min-width: 651px) {
+        .nav { min-height: 82px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 82px; right: 32px; left: 32px; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+      }
+      @media (max-width: 760px) {
+        .wrap { width: min(100% - 40px, 520px); }
+        .nav { min-height: 76px; }
+        .brand { font-size: .96rem; }
+        .brand-mark { width: 32px; height: 32px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 76px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+        .hero { min-height: 640px; min-height: 85svh; background-position: 58% center; }
+        .hero-content { padding: 120px 0 70px; }
+        h1 { font-size: clamp(3.4rem, 14vw, 5.2rem); }
+        .hero-copy { font-size: .9rem; }
+        .intro, .planning-grid { grid-template-columns: 1fr; gap: 24px; padding-block: 72px 78px; }
+        .circuits { padding-block: 72px 78px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+        .circuit-grid { grid-template-columns: 1fr; gap: 14px; }
+        .circuit-cover { min-height: 210px; }
+        .planning { padding-block: 72px 78px; }
+        .list-grid { grid-template-columns: 1fr; gap: 26px; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
+          <a href="index.html">Home</a><a href="about.html">About us</a><a href="index.html#packages">Safari packages</a><a href="#circuits">Circuits</a><a href="cultural-tours.html">Cultural tours</a><a href="kilimanjaro.html">Kilimanjaro</a><a class="nav-cta" href="index.html?experience=Western%20Tanzania%20Safari#contact">Plan your safari</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-content">
+          <p class="eyebrow">Cinematic Wonder Africa Safaris · Experience Africa. Discover the Wonder.</p>
+          <h1 class="serif">Beyond the<br>well-traveled <em>path.</em></h1>
+          <p class="hero-copy">Discover four distinct sides of Tanzania, from the celebrated wildlife parks of the north to Southern wilderness, Western chimpanzee forests and Eastern rainforest and coastal heritage.</p>
+          <div class="hero-actions"><a class="button button-light" href="#circuits">Explore the four circuits <span aria-hidden="true">-&gt;</span></a><a class="button button-outline" href="index.html#contact">Plan an adventure</a></div>
+        </div>
+      </section>
+
+      <section class="intro wrap">
+        <div><p class="eyebrow section-label">Four distinctive journeys</p><h2 class="serif">One country.<br><em>Many wonders.</em></h2></div>
+        <div class="prose">
+          <p>These sample seven-day itineraries bring together Northern Tanzania's classic wildlife, Southern wilderness and river experiences, Western Tanzania's forest and lakeside scenery, and Eastern Tanzania's waterfalls and coastal heritage.</p>
+          <p>Remote circuits require careful coordination. Actual routes depend on flight schedules, park access, boat and road conditions, accommodation availability and the confirmed arrangements of local providers.</p>
+          <div class="notice"><strong>Sample itineraries, not confirmed bookings.</strong> Chimpanzee sightings are not guaranteed. Confirm flight connections, boat transfers, park access, guides, accommodation and all fees before travel.</div>
+        </div>
+      </section>
+
+      <section class="circuits" id="circuits">
+        <div class="wrap">
+          <div class="section-head"><div><p class="eyebrow section-label">Four Tanzania safari circuits</p><h2 class="serif">Choose your seven-day journey.</h2></div><p>These are suggested travel groupings, not universally standardized official circuits. Open a card for its itinerary, highlights and seasonal planning notes.</p></div>
+          <div class="circuit-grid" id="circuit-grid"></div>
+        </div>
+      </section>
+
+      <section class="planning">
+        <div class="wrap">
+          <div class="planning-grid">
+            <div><p class="eyebrow section-label">Before you travel</p><h2 class="serif">Plan the details with <em>care.</em></h2></div>
+            <div class="prose">
+              <p>Western and Eastern circuit logistics can vary by season and provider. Build flexibility into your schedule, especially around domestic flights, boat transfers, long road journeys, park access and weather-dependent activities.</p>
+              <div class="list-grid">
+                <div><h3 class="serif">May be included</h3><ul><li>English-speaking driver-guide or authorized local guide as specified.</li><li>Private safari transport, where specified.</li><li>Accommodation and meals listed in the confirmed itinerary.</li><li>Park fees and scheduled activities only when expressly included.</li><li>Airport transfers and drinking water where agreed.</li></ul></div>
+                <div><h3 class="serif">Usually excluded unless agreed</h3><ul><li>International flights, visas and travel insurance.</li><li>Domestic flights and boat transfers not listed as included.</li><li>Tips, personal shopping and alcoholic beverages.</li><li>Optional excursions and additional accommodation.</li><li>Services or fees outside the confirmed quotation.</li></ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="wrap"><p class="eyebrow section-label">Your African adventure begins here</p><h2 class="serif">Choose a circuit. We'll help you explore the possibilities.</h2><p>Tell us which route interests you, when you hope to travel and what you would like to experience. We'll help you request suitable arrangements and confirm current logistics with the relevant providers.</p><a class="button button-outline" href="index.html?experience=Western%20Tanzania%20Safari#contact">Request a personalized safari quote <span aria-hidden="true">-&gt;</span></a></div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+      <span class="footer-note">Experience Africa. Discover the Wonder.</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About us</a><a href="cultural-tours.html">Cultural tours</a><a href="kilimanjaro.html">Kilimanjaro</a><a href="index.html#contact">Contact</a></div>
+    </div></footer>
+
+    <script>
+      const circuits = [
+        {
+          id: "northern",
+          title: "Northern Tanzania Circuit",
+          subtitle: "The Great Northern Wildlife Safari",
+          route: "Tarangire · Serengeti · Ngorongoro · Lake Manyara",
+          start: "Arusha",
+          end: "Arusha",
+          type: "Wildlife safari · Nature · Photography",
+          ideal: "Couples, families, honeymooners, photographers and small groups",
+          imageAlt: "Tanzania savannah and wildlife landscapes of the northern circuit",
+          overview: "Discover Northern Tanzania's celebrated parks, from Tarangire's baobabs and elephant herds to the Serengeti plains and Ngorongoro Crater. This sample includes four destinations; actual park order may be adjusted to travel dates, road conditions and availability.",
+          highlights: "Serengeti wildlife viewing · Ngorongoro Crater game drive · Tarangire elephants · Lake Manyara landscapes and birdlife · professional safari guiding",
+          bestTime: "June–October is generally favorable for wildlife viewing; December–March can also be rewarding. Migration viewing depends on seasonal wildlife movements.",
+          note: "Park fees, crater access, accommodation, meals and the Lake Manyara visit depend on the confirmed quotation and schedule. The multi-park route is a sample and may require long drives.",
+          days: [
+            ["Day 1", "Arrival in Arusha", "Arrive at Kilimanjaro International Airport or Arusha Airport. Meet your representative, transfer to your accommodation, check in and receive a safari briefing.", "Stay: Hotel in Arusha"],
+            ["Day 2", "Arusha to Tarangire National Park", "After breakfast, travel to Tarangire, known for baobab trees, elephants and varied wildlife. Enjoy a game drive and picnic lunch before continuing to your lodge.", "Stay: Lodge near Tarangire or Karatu"],
+            ["Day 3", "Tarangire area to Serengeti National Park", "Travel toward Serengeti through the Ngorongoro Conservation Area, enjoying the landscapes along the way. After entering the park, enjoy a game drive en route to your accommodation.", "Stay: Serengeti safari lodge or tented camp"],
+            ["Day 4", "Full-day Serengeti safari", "Explore the plains in search of lions, elephants, giraffes, cheetahs, zebras, wildebeest and other wildlife. The route can be adjusted according to season and reported wildlife movements.", "Stay: Serengeti safari lodge or tented camp"],
+            ["Day 5", "Serengeti to Ngorongoro Highlands", "Enjoy a morning game drive before traveling toward the Ngorongoro Conservation Area. Continue to your accommodation near the crater, with scenic stops where permitted.", "Stay: Lodge in Karatu or the Ngorongoro area"],
+            ["Day 6", "Ngorongoro Crater safari", "After an early breakfast, descend into Ngorongoro Crater for a game drive. Look for buffaloes, lions, elephants, hippos and, with luck, endangered black rhinos. Return to Karatu afterward.", "Stay: Lodge in Karatu"],
+            ["Day 7", "Lake Manyara and return to Arusha", "Visit Lake Manyara National Park for a game drive through its varied habitats and birdlife, then return to Arusha. The visit depends on timing, park access and confirmed arrangements."]
+          ]
+        },
+        {
+          id: "southern",
+          title: "Southern Tanzania Circuit",
+          subtitle: "Southern Wilderness & River Safari",
+          route: "Nyerere National Park · Mikumi National Park",
+          start: "Dar es Salaam",
+          end: "Dar es Salaam",
+          type: "Wildlife · Adventure · Nature",
+          ideal: "Wildlife lovers, couples, photographers and travelers seeking quieter safari destinations",
+          imageAlt: "Southern Tanzania wilderness and river safari landscapes",
+          overview: "Explore Southern Tanzania's wilderness and river systems in Nyerere National Park, then discover the open savannahs of Mikumi. This sample combines game drives with an optional guided boat safari, subject to availability and operating conditions.",
+          highlights: "Nyerere wilderness · Rufiji River boat safari where available · Mikumi wildlife viewing · scenery · birdwatching and photography",
+          bestTime: "June–October is generally favorable for wildlife viewing. Seasonal rainfall can affect roads and activities.",
+          note: "Road or domestic flight transfer to Nyerere, boat safari operations and the substantial Nyerere-to-Mikumi transfer require advance confirmation. Travel times and activities depend on actual route, weather and provider schedules.",
+          days: [
+            ["Day 1", "Arrival in Dar es Salaam", "Meet your safari representative at Julius Nyerere International Airport and transfer to your hotel. Enjoy a welcome briefing and time to relax.", "Stay: Hotel in Dar es Salaam"],
+            ["Day 2", "Dar es Salaam to Nyerere National Park", "Travel to the Nyerere area by arranged road transfer or suitable domestic flight. Check in at your accommodation and, depending on arrival time, enjoy a scheduled afternoon safari activity.", "Stay: Safari lodge or tented camp in the Nyerere area"],
+            ["Day 3", "Full-day Nyerere wildlife safari", "Explore the park's diverse landscapes on a full-day game drive. Look for elephants, giraffes, buffaloes, lions, antelopes and birdlife.", "Stay: Safari lodge or tented camp"],
+            ["Day 4", "Nyerere river experience", "Enjoy a morning game drive or permitted guided nature activity. Later, a boat safari on the Rufiji River or another approved waterway may be arranged, subject to availability, weather and local operations. Observe wildlife from a safe distance.", "Stay: Safari lodge or tented camp"],
+            ["Day 5", "Nyerere to Mikumi National Park", "Depart for Mikumi after breakfast. This is a substantial transfer day; confirm the route and journey time before booking. Check in and relax on arrival.", "Stay: Lodge near Mikumi National Park"],
+            ["Day 6", "Full-day Mikumi safari", "Explore Mikumi's Mkata floodplain and surrounding habitats on game drives, looking for elephants, giraffes, buffaloes, zebras, lions and other wildlife.", "Stay: Lodge near Mikumi"],
+            ["Day 7", "Return to Dar es Salaam", "Travel back to Dar es Salaam after breakfast. Transfer to your hotel or airport according to confirmed arrangements."]
+          ]
+        },
+        {
+          id: "western",
+          title: "Western Tanzania Circuit",
+          subtitle: "Chimpanzees & Lake Tanganyika Adventure",
+          route: "Kigoma · Gombe Stream National Park · Lake Tanganyika",
+          start: "Dar es Salaam or Arusha, subject to flights",
+          end: "Dar es Salaam or Arusha",
+          type: "Chimpanzee trekking · Nature · Relaxation",
+          ideal: "Nature enthusiasts, adventurous couples, photographers and primate lovers",
+          imageAlt: "Tropical forest and mountain landscapes of western Tanzania",
+          overview: "Discover remote Western Tanzania, where forested mountains meet Lake Tanganyika. This seven-day sample focuses on Gombe Stream National Park and its chimpanzees. A separate, longer fly-in itinerary can be requested for Katavi or Mahale Mountains.",
+          highlights: "Chimpanzee trekking · Gombe Stream National Park · Lake Tanganyika · tropical forest · birdwatching",
+          bestTime: "June–October often offers favorable trekking conditions, though tracking may be possible in other months. Consider rainfall, lake conditions and transport schedules.",
+          note: "Gombe access, boat transfers, accommodation and domestic flights require advance coordination. The sample assumes suitable connections and must be adjusted to actual schedules. Chimpanzee sightings are not guaranteed.",
+          days: [
+            ["Day 1", "Arrival in Dar es Salaam or Arusha", "Meet your representative and transfer to your hotel. Receive a briefing about your Western Tanzania adventure.", "Stay: City hotel"],
+            ["Day 2", "Travel to Kigoma", "Take a scheduled domestic flight to Kigoma, subject to airline availability. Transfer to accommodation near Lake Tanganyika and enjoy time to relax.", "Stay: Hotel or lodge in Kigoma"],
+            ["Day 3", "Boat transfer to Gombe Stream National Park", "After breakfast, travel by arranged boat to Gombe. Meet your authorized park guide and receive a trekking briefing. Depending on arrival time and park arrangements, take an introductory guided forest walk.", "Stay: Approved accommodation in or near Gombe"],
+            ["Day 4", "Chimpanzee trekking experience", "Join an authorized guide for a chimpanzee trekking excursion. Learn about primate behavior, vegetation and conservation. Trek duration depends on conditions and animal locations; sightings are not guaranteed.", "Stay: Approved accommodation in or near Gombe"],
+            ["Day 5", "Gombe nature exploration", "Enjoy another guided trekking opportunity or permitted forest activity. Discover local birdlife, tropical vegetation and views of Lake Tanganyika.", "Stay: Approved accommodation in or near Gombe"],
+            ["Day 6", "Return to Kigoma", "Return to Kigoma by arranged boat after breakfast. Depending on your schedule, explore selected local attractions or relax beside Lake Tanganyika.", "Stay: Hotel or lodge in Kigoma"],
+            ["Day 7", "Departure", "Transfer to Kigoma Airport for your onward domestic flight, subject to the confirmed flight schedule."]
+          ]
+        },
+        {
+          id: "eastern",
+          title: "Eastern Tanzania Circuit",
+          subtitle: "Wildlife, Waterfalls & Coastal Heritage",
+          route: "Dar es Salaam · Mikumi · Udzungwa Mountains · Bagamoyo",
+          start: "Dar es Salaam",
+          end: "Dar es Salaam",
+          type: "Wildlife · Hiking · Nature · History",
+          ideal: "Couples, families, nature lovers, photographers and cultural travelers",
+          imageAlt: "Forest and mountain landscape in Eastern Tanzania",
+          overview: "Experience a different side of Tanzania with wildlife-rich savannah, tropical mountain forest and coastal heritage. Explore Mikumi National Park, hike in Udzungwa Mountains National Park and discover Bagamoyo.",
+          highlights: "Mikumi wildlife safaris · Udzungwa rainforest · Sanje Waterfalls · Bagamoyo history · coastal culture",
+          bestTime: "June–October is generally favorable for wildlife viewing and outdoor exploration. Udzungwa hiking conditions depend on rainfall; some trails may become slippery.",
+          note: "The drive from Udzungwa to Bagamoyo is long. Plan an early departure and keep sightseeing flexible. Trail access, route choice and conditions should be confirmed locally.",
+          days: [
+            ["Day 1", "Arrival in Dar es Salaam", "Meet your representative at Julius Nyerere International Airport and transfer to your hotel. Depending on arrival time, an optional city sightseeing experience may be possible.", "Stay: Hotel in Dar es Salaam"],
+            ["Day 2", "Dar es Salaam to Mikumi National Park", "Depart after breakfast and travel through the countryside to Mikumi National Park. If time and arrangements permit, enjoy an afternoon game drive.", "Stay: Lodge near Mikumi National Park"],
+            ["Day 3", "Full-day Mikumi safari", "Explore Mikumi's grasslands and wildlife habitats. Look for elephants, giraffes, buffaloes, zebras, lions and birdlife. A picnic lunch and wildlife photography may be arranged.", "Stay: Lodge near Mikumi"],
+            ["Day 4", "Mikumi to Udzungwa Mountains", "Travel toward Udzungwa Mountains National Park. Explore the surrounding area and prepare for a rainforest hike. Depending on arrival time and arrangements, take a short guided nature walk.", "Stay: Lodge or guesthouse near Udzungwa"],
+            ["Day 5", "Udzungwa Mountains & Sanje Waterfalls", "After an early breakfast, begin a guided hike along the Sanje Waterfalls trail, subject to park access and trail conditions. Discover rainforest, mountain vegetation and birdlife. Choose the route according to fitness and weather.", "Stay: Lodge or guesthouse near Udzungwa"],
+            ["Day 6", "Udzungwa to Bagamoyo", "Begin the road journey toward Bagamoyo after breakfast. This is a long travel day, so depart early and keep sightseeing flexible. Arrive and relax near the coast.", "Stay: Hotel in Bagamoyo"],
+            ["Day 7", "Bagamoyo historical tour & Dar es Salaam", "After breakfast, visit selected historical and cultural sites with a guide, subject to access arrangements. Learn about coastal heritage, trade history and local communities, then return to Dar es Salaam for onward arrangements."]
+          ]
+        }
+      ];
+
+      function fact(label, value) {
+        const wrapper = document.createElement("div");
+        const labelEl = document.createElement("span");
+        labelEl.className = "fact-label";
+        labelEl.textContent = label;
+        const valueEl = document.createElement("span");
+        valueEl.className = "fact-value";
+        valueEl.textContent = value;
+        wrapper.append(labelEl, valueEl);
+        return wrapper;
+      }
+
+      function createCircuitCard(circuit) {
+        const card = document.createElement("article");
+        card.className = "circuit-card";
+        card.id = circuit.id;
+        const cover = document.createElement("div");
+        cover.className = "circuit-cover";
+        cover.setAttribute("role", "img");
+        cover.setAttribute("aria-label", circuit.imageAlt);
+        const coverText = document.createElement("div");
+        const eyebrow = document.createElement("p");
+        eyebrow.className = "eyebrow";
+        eyebrow.textContent = "7 days / 6 nights";
+        const heading = document.createElement("h3");
+        heading.className = "serif";
+        heading.textContent = circuit.title;
+        coverText.append(eyebrow, heading);
+        cover.append(coverText);
+
+        const body = document.createElement("div");
+        body.className = "circuit-body";
+        const meta = document.createElement("div");
+        meta.className = "circuit-meta";
+        [circuit.route, circuit.type].forEach((value) => {
+          const item = document.createElement("span");
+          item.textContent = value;
+          meta.append(item);
+        });
+        const subtitle = document.createElement("h4");
+        subtitle.className = "serif";
+        subtitle.textContent = circuit.subtitle;
+        const overview = document.createElement("p");
+        overview.textContent = circuit.overview;
+        const facts = document.createElement("div");
+        facts.className = "circuit-facts";
+        facts.append(fact("Starting point", circuit.start), fact("Ending point", circuit.end), fact("Ideal for", circuit.ideal), fact("Duration", "7 days / 6 nights"));
+
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = "View 7-day itinerary";
+        details.append(summary);
+        const days = document.createElement("ol");
+        days.className = "day-list";
+        circuit.days.forEach(([labelText, dayTitle, description, stayText]) => {
+          const day = document.createElement("li");
+          day.className = "day";
+          const label = document.createElement("span");
+          label.className = "day-label";
+          label.textContent = labelText;
+          const title = document.createElement("h5");
+          title.textContent = dayTitle;
+          const text = document.createElement("p");
+          text.textContent = description;
+          day.append(label, title, text);
+          if (stayText) {
+            const stay = document.createElement("p");
+            stay.className = "day-stay";
+            stay.textContent = stayText;
+            day.append(stay);
+          }
+          days.append(day);
+        });
+        details.append(days);
+        const highlights = document.createElement("div");
+        highlights.className = "highlights";
+        const highlightsHeading = document.createElement("strong");
+        highlightsHeading.textContent = "Circuit highlights";
+        const highlightsText = document.createElement("p");
+        highlightsText.textContent = circuit.highlights;
+        highlights.append(highlightsHeading, highlightsText);
+        details.append(highlights);
+        const bestTime = document.createElement("p");
+        bestTime.className = "best-time";
+        bestTime.textContent = `Best time to visit: ${circuit.bestTime}`;
+        details.append(bestTime);
+        const note = document.createElement("p");
+        note.className = "notice";
+        note.textContent = circuit.note;
+        details.append(note);
+        const quote = document.createElement("a");
+        quote.className = "quote";
+        quote.href = `index.html?experience=${encodeURIComponent(`${circuit.title.replace(" Circuit", "")} Safari`)}&destination=${encodeURIComponent(circuit.title)}#contact`;
+        quote.textContent = "Request a quote →";
+        body.append(meta, subtitle, overview, facts, details, quote);
+        card.append(cover, body);
+        return card;
+      }
+
+      const grid = document.querySelector("#circuit-grid");
+      circuits.forEach((circuit) => grid.append(createCircuitCard(circuit)));
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("open", !isOpen);
+      });
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>

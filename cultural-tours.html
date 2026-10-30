@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17251e">
+    <meta name="description" content="Explore sample cultural tours in Tanzania, from Arusha markets and Kilimanjaro coffee farms to Lake Eyasi and Zanzibar's Stone Town.">
+    <title>Tanzania Cultural Tours | Cinematic Wonder Africa Safaris</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2921;
+        --forest: #17251e;
+        --moss: #57664c;
+        --sand: #eee9dc;
+        --paper: #f8f6f0;
+        --clay: #bd7958;
+        --line: rgba(29, 41, 33, .18);
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .wrap { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+      .serif { font-family: var(--serif); font-weight: 400; }
+      .eyebrow { margin: 0; font-size: .68rem; font-weight: 600; letter-spacing: .2em; line-height: 1.5; text-transform: uppercase; }
+      .topbar { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); }
+      .nav { display: flex; min-height: 94px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: 1.1rem; letter-spacing: .02em; line-height: 1.04; }
+      .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; font-family: var(--sans); font-size: .7rem; }
+      .brand small { display: block; margin-top: 5px; font-family: var(--sans); font-size: .48rem; letter-spacing: .23em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 25px; }
+      .nav-links a { font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; }
+      .nav-links a:hover { color: #e6c1a8; }
+      .nav-cta { padding: 14px 19px; border: 1px solid rgba(255,255,255,.65); }
+      .menu-toggle { display: none; padding: 10px 0 10px 10px; color: #fff; border: 0; background: transparent; font-size: .75rem; letter-spacing: .13em; text-transform: uppercase; }
+      .hero {
+        min-height: min(690px, 85svh);
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(13,25,19,.78), rgba(13,25,19,.25)),
+          url("https://media.base44.com/images/public/6ad9a1454489b7edea198275/18d42fcee_generated_image.png") center 48% / cover;
+      }
+      .hero-content { max-width: 780px; padding: 145px 0 75px; }
+      .hero .eyebrow { color: #e3c2a9; }
+      h1 { margin: 22px 0; font-size: clamp(3.8rem, 8vw, 7.3rem); letter-spacing: -.055em; line-height: .92; }
+      h1 em { color: #e3c2a9; font-style: italic; }
+      .hero-copy { max-width: 620px; margin: 0; color: rgba(255,255,255,.84); font-size: 1rem; line-height: 1.8; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 14px; padding: 0 20px; border: 1px solid transparent; font-size: .67rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .button-light { color: var(--forest); background: #f6f1e7; }
+      .button-outline { color: var(--forest); border-color: var(--forest); background: transparent; }
+      .button-outline:hover { color: #fff; background: var(--forest); }
+      .button-dark { color: #fff; border-color: rgba(255,255,255,.72); }
+      .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: start; padding-block: 95px 100px; }
+      .section-label { color: var(--clay); }
+      h2 { margin: 17px 0 0; font-size: clamp(2.6rem, 5vw, 4.7rem); letter-spacing: -.045em; line-height: .99; }
+      h2 em { color: var(--moss); font-style: italic; }
+      .prose { max-width: 680px; color: #667066; font-size: .9rem; line-height: 1.85; }
+      .prose p { margin: 0 0 16px; }
+      .notice { margin-top: 21px; padding: 17px 19px; border-left: 3px solid var(--clay); background: var(--sand); color: #555f54; font-size: .8rem; line-height: 1.7; }
+      .tour-section { padding-block: 90px 100px; background: var(--sand); }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 31px; }
+      .section-head > p { max-width: 390px; margin: 0 0 4px; color: #6b7169; font-size: .84rem; line-height: 1.7; }
+      .tour-filters { display: flex; gap: 9px; margin-bottom: 24px; overflow-x: auto; }
+      .filter { flex: 0 0 auto; padding: 10px 15px; color: #616960; border: 1px solid rgba(29,41,33,.2); border-radius: 99px; background: transparent; cursor: pointer; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
+      .filter[aria-pressed="true"], .filter:hover { color: #fff; border-color: var(--forest); background: var(--forest); }
+      .tour-grid { display: grid; grid-template-columns: repeat(2, 1fr); align-items: start; gap: 18px; }
+      .tour-card { min-width: 0; padding: 25px; background: var(--paper); }
+      .tour-card[hidden] { display: none; }
+      .tour-card-top { display: flex; justify-content: space-between; gap: 15px; color: #72796f; font-size: .63rem; letter-spacing: .1em; text-transform: uppercase; }
+      .tour-card h3 { margin: 17px 0 11px; font-size: 1.7rem; letter-spacing: -.025em; line-height: 1.15; }
+      .tour-card > p { margin: 0; color: #687166; font-size: .82rem; line-height: 1.7; }
+      .tour-facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 17px; padding-top: 15px; border-top: 1px solid var(--line); color: #697267; font-size: .72rem; }
+      .tour-card details { margin-top: 17px; border-top: 1px solid var(--line); }
+      .tour-card summary { padding: 15px 0 0; cursor: pointer; font-size: .66rem; font-weight: 600; letter-spacing: .1em; list-style-position: inside; text-transform: uppercase; }
+      .tour-card summary:hover { color: var(--clay); }
+      .day-list { display: grid; gap: 0; margin: 13px 0 0; padding: 0; list-style: none; }
+      .day { padding: 15px 0; border-top: 1px solid var(--line); }
+      .day-label { color: var(--clay); font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+      .day h4 { margin: 7px 0; font-family: var(--serif); font-size: 1.18rem; font-weight: 400; }
+      .day p { margin: 0; color: #697267; font-size: .78rem; line-height: 1.7; }
+      .tour-quote { display: inline-flex; margin-top: 17px; padding: 12px 14px; color: #fff; background: var(--forest); font-size: .63rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+      .tour-quote:hover { background: var(--moss); }
+      .responsible { padding-block: 95px 100px; color: #f5f0e6; background: var(--forest); }
+      .responsible-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; }
+      .responsible .section-label { color: #d3a384; }
+      .responsible h2 em { color: #d3a384; }
+      .responsible .prose { color: rgba(245,240,230,.74); }
+      .responsible-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin: 23px 0 0; padding: 0; list-style: none; }
+      .responsible-list li { padding-top: 12px; border-top: 1px solid rgba(255,255,255,.2); color: rgba(245,240,230,.82); font-size: .78rem; line-height: 1.6; }
+      .include-section { padding-block: 85px 90px; }
+      .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+      .include-grid h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+      .include-grid ul { display: grid; gap: 10px; margin: 23px 0 0; padding-left: 19px; color: #687166; font-size: .83rem; line-height: 1.65; }
+      .final-cta { padding-block: 75px; background: var(--sand); text-align: center; }
+      .final-cta h2 { max-width: 790px; margin-inline: auto; }
+      .final-cta p { max-width: 670px; margin: 18px auto 24px; color: #687166; font-size: .86rem; line-height: 1.8; }
+      .footer { padding-block: 28px; color: rgba(245,240,230,.72); background: #111b15; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .footer .brand { color: #fff; font-size: .95rem; }
+      .footer .brand-mark { width: 31px; height: 31px; }
+      .footer-note { font-size: .68rem; }
+      .footer-links { display: flex; gap: 18px; font-size: .65rem; letter-spacing: .09em; text-transform: uppercase; }
+      .footer-links a:hover { color: #fff; }
+      @media (max-width: 900px) {
+        .nav-links { gap: 15px; }
+        .nav-links a { font-size: .59rem; }
+        .intro, .responsible-grid { gap: 45px; }
+      }
+      @media (max-width: 1100px) and (min-width: 651px) {
+        .nav { min-height: 82px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 82px; right: 32px; left: 32px; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); font-size: .7rem; }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+      }
+      @media (max-width: 650px) {
+        .wrap { width: min(100% - 40px, 520px); }
+        .nav { min-height: 76px; }
+        .brand { font-size: .96rem; }
+        .brand-mark { width: 32px; height: 32px; }
+        .menu-toggle { display: block; }
+        .nav-links { position: absolute; top: 76px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 17px; background: var(--forest); }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+        .nav-links .nav-cta { margin-top: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,.5); text-align: center; }
+        .hero { min-height: 650px; min-height: 85svh; background-position: 58% center; }
+        .hero-content { padding: 120px 0 70px; }
+        h1 { font-size: clamp(3.6rem, 15vw, 5.4rem); }
+        .hero-copy { font-size: .9rem; }
+        .intro, .responsible-grid { grid-template-columns: 1fr; gap: 24px; padding-block: 72px 78px; }
+        .section-head { align-items: flex-start; flex-direction: column; gap: 14px; }
+        .tour-section { padding-block: 72px 78px; }
+        .tour-grid { grid-template-columns: 1fr; gap: 13px; }
+        .tour-card { padding: 21px; }
+        .responsible { padding-block: 72px 78px; }
+        .responsible-list { grid-template-columns: 1fr; }
+        .include-section { padding-block: 72px; }
+        .include-grid { grid-template-columns: 1fr; gap: 35px; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Cinematic Wonder Africa Safaris home"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="index.html#packages">Safari packages</a>
+          <a href="tanzania-circuits.html">Tanzania circuits</a>
+          <a href="#tours">Cultural tours</a>
+          <a href="kilimanjaro.html">Kilimanjaro</a>
+          <a href="index.html#destinations">Destinations</a>
+          <a class="nav-cta" href="index.html?experience=Cultural%20Tours#contact">Request a quote</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-content">
+          <p class="eyebrow">Cinematic Wonder Africa Safaris · Experience Africa. Discover the Wonder.</p>
+          <h1 class="serif">Meet the people.<br>Discover the <em>traditions.</em></h1>
+          <p class="hero-copy">Tanzania's cultural heritage is as remarkable as its wildlife. Explore local traditions, coffee farming, lively markets, regional food and community-hosted experiences.</p>
+          <div class="hero-actions"><a class="button button-light" href="#tours">Explore cultural tours <span aria-hidden="true">-&gt;</span></a><a class="button button-dark" href="index.html?experience=Cultural%20Tours#contact">Request a quote</a></div>
+        </div>
+      </section>
+
+      <section class="intro wrap">
+        <div>
+          <p class="eyebrow section-label">A deeper sense of place</p>
+          <h2 class="serif">Discover Tanzania<br><em>beyond the familiar.</em></h2>
+        </div>
+        <div class="prose">
+          <p>From Arusha's everyday city life to coffee farms near Kilimanjaro, community visits around Lake Eyasi and the heritage of Stone Town, these sample itineraries offer different ways to learn about Tanzania's people and places.</p>
+          <p>Choose a short experience or a multi-day cultural journey. Routes and activities should be confirmed with local hosts or authorized community tourism providers before travel.</p>
+          <div class="notice"><strong>Respectful travel matters.</strong> Visits depend on community consent, availability and local customs. Photography is only appropriate with permission, and communities decide which activities they wish to share.</div>
+        </div>
+      </section>
+
+      <section class="tour-section" id="tours">
+        <div class="wrap">
+          <div class="section-head">
+            <div><p class="eyebrow section-label">Sample itineraries · 1 to 7 days</p><h2 class="serif">Choose your cultural journey.</h2></div>
+            <p>Open any itinerary to explore a suggested day-by-day outline. All routes, hosts, inclusions and prices require confirmation.</p>
+          </div>
+          <div class="tour-filters" role="group" aria-label="Filter cultural tours">
+            <button class="filter" type="button" data-filter="all" aria-pressed="true">All tours</button>
+            <button class="filter" type="button" data-filter="day" aria-pressed="false">Day experiences</button>
+            <button class="filter" type="button" data-filter="multi" aria-pressed="false">Multi-day journeys</button>
+            <button class="filter" type="button" data-filter="island" aria-pressed="false">Coast & island</button>
+          </div>
+          <div class="tour-grid" id="tour-grid"></div>
+        </div>
+      </section>
+
+      <section class="responsible">
+        <div class="wrap responsible-grid">
+          <div><p class="eyebrow section-label">Responsible cultural tourism</p><h2 class="serif">People are not <em>attractions.</em></h2></div>
+          <div class="prose">
+            <p>We aim to offer respectful cultural experiences that benefit local hosts and communities. Visits should be based on consent, fair arrangements and respect for local customs. Each host community decides what can be shared and when.</p>
+            <ul class="responsible-list">
+              <li>Ask permission before photographing people, homes or ceremonies.</li>
+              <li>Respect restrictions around sacred places and cultural practices.</li>
+              <li>Purchase crafts directly from participating artisans where possible.</li>
+              <li>Follow local guidance on appropriate clothing and behavior.</li>
+              <li>Arrange visits through local hosts or authorized providers.</li>
+              <li>Confirm access, travel times, availability and fees in advance.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="include-section wrap">
+        <div class="section-head"><div><p class="eyebrow section-label">Before you travel</p><h2 class="serif">Know what your quote includes.</h2></div><p>Inclusions vary by route and provider. Confirm each item in your written quotation.</p></div>
+        <div class="include-grid">
+          <div><h2 class="serif">May be included</h2><ul><li>Professional local or cultural tour guide.</li><li>Private transfers as specified.</li><li>Accommodation and meals stated in the itinerary.</li><li>Guided cultural visits and community-hosted activities explicitly included in the quote.</li><li>Farm visits, demonstrations and airport transfers where arranged.</li></ul></div>
+          <div><h2 class="serif">Usually not included unless agreed</h2><ul><li>International flights, domestic flights and ferry tickets.</li><li>Visa fees and travel insurance.</li><li>Personal shopping, souvenirs, tips and gratuities.</li><li>Alcoholic beverages and optional activities.</li><li>Additional accommodation, meals or community fees not expressly stated in the quote.</li></ul></div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="wrap">
+          <p class="eyebrow section-label">Discover the people and traditions of Tanzania</p>
+          <h2 class="serif">Choose your cultural experience. Start with a conversation.</h2>
+          <p>Tell us which places and experiences interest you. We'll help you explore a suitable itinerary and confirm arrangements with relevant local providers.</p>
+          <a class="button button-outline" href="index.html?experience=Cultural%20Tours#contact">Request a personalized quote <span aria-hidden="true">-&gt;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="wrap footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">CW</span><span>Cinematic Wonder<small>Africa Safaris</small></span></a>
+      <span class="footer-note">Experience Africa. Discover the Wonder.</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About us</a><a href="kilimanjaro.html">Kilimanjaro</a><a href="index.html#contact">Contact</a></div>
+    </div></footer>
+
+    <script>
+      const culturalTours = [
+        {
+          title: "Arusha Cultural Experience",
+          duration: "1 day",
+          type: "City · Food · Culture",
+          start: "Arusha",
+          end: "Arusha",
+          filter: "day",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/18d42fcee_generated_image.png",
+          overview: "Discover everyday Arusha through selected city landmarks, a local market, Tanzanian food, crafts and cultural learning. A flexible introduction for travelers with limited time.",
+          days: [
+            ["Morning · Discover Arusha", "Meet your guide at your hotel after breakfast. Visit selected city landmarks and a local market to explore produce, spices, fabrics and everyday products. Activities may include guided sightseeing, learning about Tanzanian ingredients and discovering local crafts."],
+            ["Afternoon · Food, crafts & local life", "Enjoy a Tanzanian lunch featuring local dishes, subject to your preferences. Continue to a local craft workshop, cultural center or community-hosted activity, then return to your hotel in the late afternoon."]
+          ],
+          highlights: "City exploration · local market · Tanzanian food · crafts · everyday city life"
+        },
+        {
+          title: "Maasai Cultural Experience",
+          duration: "1 day",
+          type: "Community tourism · Cultural learning",
+          start: "Arusha or nearby lodge",
+          end: "Arusha or your lodge",
+          filter: "day",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/853d7e9d5_generated_image.png",
+          overview: "A community-hosted visit to learn about Maasai heritage, pastoral traditions, traditional knowledge and contemporary community life. The participating community determines which activities are shared.",
+          days: [
+            ["Morning · Welcome to a Maasai community", "Travel with a local guide to a participating community. Meet your hosts and learn about community life. Depending on the hosts, the visit may include conversation about homes and settlement patterns, livestock and pastoral life, clothing, beadwork and stories shared by community members."],
+            ["Afternoon · Crafts, stories & exchange", "Join a community-hosted cultural exchange. Depending on availability, learn about beadwork, traditional foods, local livelihoods or community-led conservation. Handmade products may be available directly from local artisans. Return to your accommodation."]
+          ],
+          highlights: "Community-hosted learning · pastoral heritage · beadwork where offered · cultural exchange",
+          note: "Experiences vary between communities. Visits should not interrupt daily activities; photography requires permission."
+        },
+        {
+          title: "Chagga Coffee & Kilimanjaro Foothills",
+          duration: "1 day",
+          type: "Agriculture · Nature · Culture",
+          start: "Moshi",
+          end: "Moshi",
+          filter: "day",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/5bd4cfc0c_generated_image.png",
+          overview: "Explore the Kilimanjaro foothills and learn about coffee farming, local livelihoods and Chagga heritage with a participating coffee-growing household or farm.",
+          days: [
+            ["Morning · Journey to the coffee farms", "Travel from Moshi to a participating coffee-growing community. Meet your local host and learn about cultivation. Depending on the season, observe harvesting, sorting or drying."],
+            ["Coffee preparation experience", "Discover traditional preparation techniques with your host. Suitable activities may include roasting, grinding and brewing coffee, followed by a tasting and conversation about coffee's role in local households."],
+            ["Afternoon · Village walk or waterfall", "Depending on your interests, take a guided village walk or visit a nearby waterfall. Waterfall paths may be uneven, so agree on an appropriate route and allow time for the return journey. Return to Moshi."]
+          ],
+          highlights: "Coffee farm · preparation demonstration · local hospitality · foothill scenery · optional nature walk"
+        },
+        {
+          title: "Lake Eyasi Cultural Experience",
+          duration: "2 days · 1 night",
+          type: "Community learning · Nature",
+          start: "Arusha or Karatu",
+          end: "Arusha or Karatu",
+          filter: "multi",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/3cef171c1_generated_image.png",
+          overview: "Travel to the Lake Eyasi area to learn about the region's distinct communities. Visits are arranged with local guides and community permission; hosts determine what they wish to share.",
+          days: [
+            ["Day 1 · Journey to Lake Eyasi", "Depart after breakfast from Arusha or Karatu. Enjoy countryside views and learn about the area's geography and local livelihoods. Check in at a lodge or guesthouse near Lake Eyasi; meet a local guide if arrangements allow."],
+            ["Day 2 · Community visits & cultural learning", "Join pre-arranged community visits. Where welcomed, learn about traditional knowledge, food gathering, crafts and relationships with the environment. Hadzabe hosts may share knowledge according to current community preferences; a separate Datoga visit may introduce metalworking, beadwork or pastoral livelihoods where offered. Enjoy lunch and return."]
+          ],
+          highlights: "Lake Eyasi region · local guide · Hadzabe and Datoga visits where arranged · community-led learning",
+          note: "Communities have distinct identities. Consent, community rules and applicable land-use regulations must be respected."
+        },
+        {
+          title: "Mto wa Mbu Cultural & Food Tour",
+          duration: "2 days · 1 night",
+          type: "Culture · Food · Agriculture",
+          start: "Arusha or Karatu",
+          end: "Arusha or Karatu",
+          filter: "multi",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/18d42fcee_generated_image.png",
+          overview: "Discover the cultural diversity of Mto wa Mbu near Lake Manyara through agriculture, regional food traditions and visits with participating community hosts.",
+          days: [
+            ["Day 1 · Village life & local food", "Travel to Mto wa Mbu and meet your local guide. Walk through selected town areas and surrounding farms. Depending on hosts and availability, visit farms, learn about banana cultivation and local crops, discover traditional cooking, meet artisans and sample regional dishes. Stay at a lodge or guesthouse in the area."],
+            ["Day 2 · Crafts, agriculture & departure", "Continue your exploration after breakfast. Visit a participating workshop or agricultural project and learn about local livelihoods. Depending on hosts and season, see how selected handmade or farm products are prepared. Have lunch before continuing to your next destination."]
+          ],
+          highlights: "Food traditions · farms · banana cultivation · crafts · local livelihoods"
+        },
+        {
+          title: "Bagamoyo Coastal Heritage Tour",
+          duration: "2 days · 1 night",
+          type: "History · Swahili culture · Coast",
+          start: "Dar es Salaam",
+          end: "Dar es Salaam",
+          filter: "island",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/489f88ca0_generated_image.png",
+          overview: "Explore Bagamoyo's Swahili and Indian Ocean heritage, selected historical landmarks, local architecture and contemporary coastal life with a local guide.",
+          days: [
+            ["Day 1 · Dar es Salaam to Bagamoyo", "Travel to Bagamoyo after breakfast. Join a guided visit to selected heritage sites, subject to opening hours and access arrangements. Learn about the town's trading history and the experiences of people across different periods. Later explore selected streets and coastal areas. Stay at a hotel or guesthouse."],
+            ["Day 2 · Swahili heritage & coastal life", "Continue exploring after breakfast. Depending on availability, visit craft workshops or meet community hosts who share aspects of Swahili coastal culture. Enjoy a coastal lunch before returning to Dar es Salaam."]
+          ],
+          highlights: "Heritage sites · architecture · Swahili coastal culture · local guide",
+          note: "Historical site access and opening hours should be confirmed for your dates."
+        },
+        {
+          title: "Stone Town & Zanzibar Cultural Experience",
+          duration: "3 days · 2 nights",
+          type: "Heritage · Food · Island culture",
+          start: "Zanzibar",
+          end: "Zanzibar",
+          filter: "island",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/489f88ca0_generated_image.png",
+          overview: "Discover Zanzibar's Swahili heritage through historic Stone Town, local cuisine, spice cultivation and community experiences.",
+          days: [
+            ["Day 1 · Explore historic Stone Town", "Meet your local guide for a walking tour through historic streets, carved doors, architectural influences and local markets. Learn about trading history and the complex history of the Indian Ocean, including the slave trade and its lasting consequences. Enjoy a traditional Swahili meal; stay at a hotel in Zanzibar."],
+            ["Day 2 · Spice farm & local food", "Visit a participating spice farm to learn about selected spices, herbs and tropical plants. Depending on the farm, discover cultivation, harvesting and local cooking uses. Enjoy lunch and return to Stone Town."],
+            ["Day 3 · Coastal culture & departure", "Depending on your schedule, visit a local craft workshop or join a community-hosted coastal experience. Alternatively, explore Stone Town independently before transfer to the airport or ferry terminal."]
+          ],
+          highlights: "Stone Town · Swahili food · spice farm · island heritage",
+          note: "Spice farm activities and community visits depend on host availability and arrangements."
+        },
+        {
+          title: "Northern Tanzania Cultural Journey",
+          duration: "4 days · 3 nights",
+          type: "Cultural immersion · Food · Agriculture",
+          start: "Arusha",
+          end: "Arusha",
+          filter: "multi",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/18d42fcee_generated_image.png",
+          overview: "Experience different aspects of Northern Tanzania's cultural heritage through community-hosted activities, local food, coffee farming and traditional knowledge.",
+          days: [
+            ["Day 1 · Arusha city & local markets", "Explore selected markets, craft workshops and cultural attractions with a local guide. Learn about the city's communities, food and everyday life. Stay at a hotel in Arusha."],
+            ["Day 2 · Maasai community experience", "Travel to a participating Maasai community for a pre-arranged visit. Learn about pastoral traditions, beadwork and contemporary community life through conversations with local hosts. Lunch and accommodation are according to confirmed arrangements."],
+            ["Day 3 · Mto wa Mbu cultural & food tour", "Travel toward Mto wa Mbu for a guided visit with participating farms and local food producers. Discover crops, cooking traditions and crafts. Stay near Mto wa Mbu or Karatu."],
+            ["Day 4 · Coffee experience or return to Arusha", "Choose a coffee experience near Kilimanjaro or return to Arusha, depending on onward plans. The coffee option may require another overnight or a revised route because Kilimanjaro's foothills are not close to Mto wa Mbu. Confirm a practical schedule with the operator."]
+          ],
+          highlights: "Arusha · Maasai community visit · Mto wa Mbu · optional Kilimanjaro foothills coffee"
+        },
+        {
+          title: "Tanzania Cultural Discovery",
+          duration: "5 days · 4 nights",
+          type: "Culture · History · Food",
+          start: "Arusha",
+          end: "Arusha",
+          filter: "multi",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/853d7e9d5_generated_image.png",
+          overview: "A multi-day introduction to markets, community-hosted visits, Lake Eyasi and the food, farming and crafts of Mto wa Mbu.",
+          days: [
+            ["Day 1 · Arusha markets & cultural attractions", "Arrive in Arusha and explore selected local markets, cultural attractions and craft workshops. Learn about the city's diverse communities and everyday life. Stay at a hotel in Arusha."],
+            ["Day 2 · Maasai community visit", "Travel to a participating Maasai community. Meet local hosts and learn about pastoral traditions, beadwork, food and community life. Stay at a lodge in the selected area."],
+            ["Day 3 · Lake Eyasi cultural experience", "Travel toward Lake Eyasi. Meet your local guide and learn about the region's communities and environment. Stay at a lodge or guesthouse near the lake."],
+            ["Day 4 · Community learning & return toward Karatu", "Join pre-arranged community visits, subject to consent and availability. Learn about local livelihoods and traditional knowledge through conversations with hosts. Later travel toward Karatu and stay at a lodge."],
+            ["Day 5 · Mto wa Mbu & departure", "Visit Mto wa Mbu for a guided food, farming or craft experience. Continue to Arusha or your next destination according to the confirmed schedule."]
+          ],
+          highlights: "Arusha markets · community visits · Lake Eyasi · Mto wa Mbu"
+        },
+        {
+          title: "Grand Tanzania Cultural Journey",
+          duration: "7 days · 6 nights",
+          type: "Culture · History · Food · Island life",
+          start: "Arusha",
+          end: "Zanzibar",
+          filter: "island",
+          image: "https://media.base44.com/images/public/6ad9a1454489b7edea198275/489f88ca0_generated_image.png",
+          overview: "A suggested route from Northern Tanzania to Zanzibar, combining markets, coffee farming, community-hosted visits, local food and Stone Town heritage.",
+          days: [
+            ["Day 1 · Discover Arusha", "Explore local markets and selected cultural attractions with a local guide."],
+            ["Day 2 · Chagga coffee & Kilimanjaro foothills", "Travel toward Moshi and visit a participating coffee farm. Learn about coffee production and traditional preparation."],
+            ["Day 3 · Community cultural experience", "Visit a participating community and learn about local traditions, crafts and livelihoods. Select the community and activities according to guest interests and host availability."],
+            ["Day 4 · Mto wa Mbu cultural & food experience", "Travel to Mto wa Mbu for a guided cultural walk and local food experience. An overnight stay may be arranged in Mto wa Mbu or Karatu depending on the wider route."],
+            ["Day 5 · Travel to Zanzibar", "Transfer to the appropriate airport and take a confirmed domestic flight to Zanzibar. After arrival, transfer to your hotel and enjoy the remainder of the day at leisure."],
+            ["Day 6 · Stone Town heritage tour", "Explore Stone Town with a local guide. Discover historic architecture, local markets, Swahili food and the island's complex cultural history."],
+            ["Day 7 · Spice farm or island experience", "Visit a participating spice farm or enjoy another locally arranged cultural activity, subject to availability. Transfer to the airport or ferry terminal for your onward journey."]
+          ],
+          highlights: "Northern Tanzania · coffee farm · community visit · Mto wa Mbu · Stone Town · Zanzibar",
+          note: "This route requires a suitable domestic flight to Zanzibar. Confirm flight availability and realistic transfer times before finalizing."
+        }
+      ];
+
+      const tourGrid = document.querySelector("#tour-grid");
+      function createTourCard(tour) {
+        const card = document.createElement("article");
+        card.className = "tour-card";
+        card.dataset.filter = tour.filter;
+        const top = document.createElement("div");
+        top.className = "tour-card-top";
+        const duration = document.createElement("span");
+        duration.textContent = tour.duration;
+        const type = document.createElement("span");
+        type.textContent = tour.type;
+        top.append(duration, type);
+        const title = document.createElement("h3");
+        title.className = "serif";
+        title.textContent = tour.title;
+        const overview = document.createElement("p");
+        overview.textContent = tour.overview;
+        const facts = document.createElement("div");
+        facts.className = "tour-facts";
+        facts.textContent = `Start: ${tour.start} · End: ${tour.end}`;
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = `View ${tour.days.length}-part itinerary & details`;
+        details.append(summary);
+        const days = document.createElement("ol");
+        days.className = "day-list";
+        tour.days.forEach(([heading, description]) => {
+          const item = document.createElement("li");
+          item.className = "day";
+          const label = document.createElement("span");
+          label.className = "day-label";
+          label.textContent = heading.split(" · ")[0];
+          const dayTitle = document.createElement("h4");
+          dayTitle.textContent = heading.includes(" · ") ? heading.split(" · ").slice(1).join(" · ") : heading;
+          const text = document.createElement("p");
+          text.textContent = description;
+          item.append(label, dayTitle, text);
+          days.append(item);
+        });
+        details.append(days);
+        const highlights = document.createElement("p");
+        highlights.className = "day";
+        highlights.textContent = `Highlights: ${tour.highlights}`;
+        details.append(highlights);
+        if (tour.note) {
+          const note = document.createElement("p");
+          note.className = "notice";
+          note.textContent = tour.note;
+          details.append(note);
+        }
+        const quote = document.createElement("a");
+        quote.className = "tour-quote";
+        quote.href = `index.html?experience=${encodeURIComponent("Cultural Tours")}&destination=${encodeURIComponent(tour.title)}#contact`;
+        quote.textContent = "Request a quote →";
+        card.append(top, title, overview, facts, details, quote);
+        return card;
+      }
+      culturalTours.forEach((tour) => tourGrid.append(createTourCard(tour)));
+      document.querySelector(".tour-filters").addEventListener("click", (event) => {
+        const button = event.target.closest(".filter");
+        if (!button) return;
+        const filter = button.dataset.filter;
+        document.querySelectorAll(".filter").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        tourGrid.querySelectorAll(".tour-card").forEach((card) => {
+          card.hidden = filter !== "all" && (filter === "multi" ? card.dataset.filter === "day" : card.dataset.filter !== filter);
+        });
+      });
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        navLinks.classList.toggle("open", !isOpen);
+      });
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>
